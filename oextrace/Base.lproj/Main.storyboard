@@ -1,24 +1,253 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qP8-Hj-JsB">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Navigation Controller-->
+        <scene sceneID="4cU-EF-K92">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <navigationController id="qP8-Hj-JsB" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="6HA-Uv-jtk">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="PhS-8S-v8H" kind="relationship" relationship="rootViewController" id="itV-1U-MVZ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2mt-SW-wwx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-581" y="47"/>
+        </scene>
+        <!--My status-->
+        <scene sceneID="p0f-wj-N6p">
+            <objects>
+                <viewController id="Ghp-dC-3Qn" customClass="StatusViewController" customModule="OExTrace_DEV" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rjl-BH-rqX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zd8-EY-FkC" customClass="RoundButton" customModule="OExTrace_DEV" customModuleProvider="target">
+                                <rect key="frame" x="32" y="426" width="350" height="44"/>
+                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="6ms-r6-urX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="STATUS CHANGE"/>
+                                <connections>
+                                    <action selector="statusChange:" destination="Ghp-dC-3Qn" eventType="touchUpInside" id="0zB-BO-SKa"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CURRENT STATUS" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oLe-m7-4Aw">
+                                <rect key="frame" x="32" y="367.5" width="350" height="26.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                <color key="textColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Zd8-EY-FkC" firstAttribute="leading" secondItem="mgh-iC-Zzn" secondAttribute="leading" constant="32" id="Nte-ly-zfO"/>
+                            <constraint firstItem="mgh-iC-Zzn" firstAttribute="trailing" secondItem="Zd8-EY-FkC" secondAttribute="trailing" constant="32" id="O7i-5X-WuS"/>
+                            <constraint firstItem="mgh-iC-Zzn" firstAttribute="trailing" secondItem="oLe-m7-4Aw" secondAttribute="trailing" constant="32" id="cQe-2C-mxz"/>
+                            <constraint firstItem="Zd8-EY-FkC" firstAttribute="centerY" secondItem="rjl-BH-rqX" secondAttribute="centerY" id="jeG-AO-GFc"/>
+                            <constraint firstItem="oLe-m7-4Aw" firstAttribute="leading" secondItem="mgh-iC-Zzn" secondAttribute="leading" constant="32" id="lbf-7g-sZD"/>
+                            <constraint firstItem="Zd8-EY-FkC" firstAttribute="top" secondItem="oLe-m7-4Aw" secondAttribute="bottom" constant="32" id="zBK-Qz-wav"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="mgh-iC-Zzn"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="My status" image="tab_status" id="iCN-pY-gUQ"/>
+                    <connections>
+                        <outlet property="statusButton" destination="Zd8-EY-FkC" id="AhY-Aw-DsQ"/>
+                        <outlet property="statusLabel" destination="oLe-m7-4Aw" id="7Ad-hX-j30"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="anG-hp-Kp1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1233" y="371"/>
+        </scene>
+        <!--Map-->
+        <scene sceneID="t7t-cV-w6e">
+            <objects>
+                <viewController id="Ead-yP-mZy" customClass="MapViewController" customModule="OExTrace_DEV" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="g17-sM-bDC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="NT9-yX-dTA">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                            </mapView>
+                            <button opaque="NO" alpha="0.64999997615814209" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tEJ-Di-iY8" customClass="RoundButton" customModule="OExTrace_DEV" customModuleProvider="target">
+                                <rect key="frame" x="16" y="685" width="40" height="40"/>
+                                <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Kqg-wg-E1x"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="bUp-cJ-rVY"/>
+                                    <constraint firstAttribute="width" constant="40" id="jYz-Za-F4f"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="rFG-ZN-adp"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <state key="normal" image="outline_remove_black_24pt">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="zoomOut:" destination="Ead-yP-mZy" eventType="touchUpInside" id="oWs-Jv-ZCP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" alpha="0.64999997615814209" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GKY-C2-Tma" customClass="RoundButton" customModule="OExTrace_DEV" customModuleProvider="target">
+                                <rect key="frame" x="16" y="637" width="40" height="40"/>
+                                <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="5Xq-0j-s5j"/>
+                                    <constraint firstAttribute="width" constant="40" id="NUm-2u-xCG"/>
+                                    <constraint firstAttribute="height" constant="40" id="lXW-PQ-yQr"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="uLD-4C-FSL"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <state key="normal" image="outline_add_black_24pt">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="zoomIn:" destination="Ead-yP-mZy" eventType="touchUpInside" id="zS4-qx-M6O"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" alpha="0.84999999999999998" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LXc-cP-DdP" customClass="RoundButton" customModule="OExTrace_DEV" customModuleProvider="target">
+                                <rect key="frame" x="16" y="741" width="40" height="40"/>
+                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="RVg-em-XGh"/>
+                                    <constraint firstAttribute="height" constant="40" id="pi0-Zg-m04"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="outline_near_me_black_24pt">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="goToMyLocation:" destination="Ead-yP-mZy" eventType="touchUpInside" id="dQh-mM-oGT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" alpha="0.65000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ln-ir-e6P" customClass="RoundButton" customModule="OExTrace_DEV" customModuleProvider="target">
+                                <rect key="frame" x="358" y="741" width="40" height="40"/>
+                                <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="7xA-IK-DtR"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="Tzh-9N-2Fw"/>
+                                    <constraint firstAttribute="height" constant="40" id="faX-nx-ck3"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="uTE-Nb-TrN"/>
+                                </constraints>
+                                <state key="normal" image="outline_bluetooth_black_24pt">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="openBtLog:" destination="Ead-yP-mZy" eventType="touchUpInside" id="Qzk-eZ-QYf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dkq-4B-wmM" customClass="RoundButton" customModule="OExTrace_DEV" customModuleProvider="target">
+                                <rect key="frame" x="72" y="741" width="270" height="40"/>
+                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="KAq-hL-o1R"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <state key="normal" title="Record contact">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="makeContact:" destination="Ead-yP-mZy" eventType="touchUpInside" id="z2f-xg-9fi"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" alpha="0.64999997615814209" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dAL-og-XTC" customClass="RoundButton" customModule="OExTrace_DEV" customModuleProvider="target">
+                                <rect key="frame" x="358" y="685" width="40" height="40"/>
+                                <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="PVC-I0-hnZ"/>
+                                    <constraint firstAttribute="height" constant="40" id="Z0k-I0-zeq"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="xeQ-fy-4fV"/>
+                                    <constraint firstAttribute="width" constant="40" id="zio-dU-b3R"/>
+                                </constraints>
+                                <state key="normal" title="D">
+                                    <color key="titleColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="openDp3tLog:" destination="Ead-yP-mZy" eventType="touchUpInside" id="6mu-o0-WJF"/>
+                                </connections>
+                            </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e0k-Ec-BGz">
+                                <rect key="frame" x="190.5" y="789" width="33" height="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="tEJ-Di-iY8" firstAttribute="leading" secondItem="g17-sM-bDC" secondAttribute="leading" constant="16" id="5Mv-Aa-XI7"/>
+                            <constraint firstAttribute="trailing" secondItem="NT9-yX-dTA" secondAttribute="trailing" id="79f-3r-nfP"/>
+                            <constraint firstItem="e0k-Ec-BGz" firstAttribute="top" secondItem="dkq-4B-wmM" secondAttribute="bottom" constant="8" id="Frt-UY-GXR"/>
+                            <constraint firstItem="NT9-yX-dTA" firstAttribute="top" secondItem="g17-sM-bDC" secondAttribute="top" id="IDm-ck-iXH"/>
+                            <constraint firstItem="hg3-eM-xsd" firstAttribute="trailing" secondItem="dAL-og-XTC" secondAttribute="trailing" constant="16" id="QHA-9R-hDF"/>
+                            <constraint firstItem="0ln-ir-e6P" firstAttribute="bottom" secondItem="dkq-4B-wmM" secondAttribute="bottom" id="QSb-ra-lKo"/>
+                            <constraint firstItem="tEJ-Di-iY8" firstAttribute="top" secondItem="GKY-C2-Tma" secondAttribute="bottom" constant="8" id="V28-SA-FIv"/>
+                            <constraint firstItem="LXc-cP-DdP" firstAttribute="bottom" secondItem="dkq-4B-wmM" secondAttribute="bottom" id="YN3-ZE-sz2"/>
+                            <constraint firstItem="dkq-4B-wmM" firstAttribute="leading" secondItem="LXc-cP-DdP" secondAttribute="trailing" constant="16" id="cSo-mt-bLA"/>
+                            <constraint firstItem="GKY-C2-Tma" firstAttribute="leading" secondItem="hg3-eM-xsd" secondAttribute="leading" constant="16" id="dQa-Mm-oAy"/>
+                            <constraint firstItem="LXc-cP-DdP" firstAttribute="top" secondItem="tEJ-Di-iY8" secondAttribute="bottom" constant="16" id="ee1-NM-X5E"/>
+                            <constraint firstItem="hg3-eM-xsd" firstAttribute="bottom" secondItem="NT9-yX-dTA" secondAttribute="bottom" id="fOe-s4-r2v"/>
+                            <constraint firstItem="LXc-cP-DdP" firstAttribute="leading" secondItem="hg3-eM-xsd" secondAttribute="leading" constant="16" id="fcD-BL-VyA"/>
+                            <constraint firstItem="hg3-eM-xsd" firstAttribute="trailing" secondItem="0ln-ir-e6P" secondAttribute="trailing" constant="16" id="hTx-gx-iXY"/>
+                            <constraint firstItem="e0k-Ec-BGz" firstAttribute="centerX" secondItem="g17-sM-bDC" secondAttribute="centerX" id="i44-f0-nLX"/>
+                            <constraint firstItem="0ln-ir-e6P" firstAttribute="top" secondItem="dAL-og-XTC" secondAttribute="bottom" constant="16" id="kIQ-cI-wsw"/>
+                            <constraint firstItem="NT9-yX-dTA" firstAttribute="leading" secondItem="g17-sM-bDC" secondAttribute="leading" id="moa-eI-F1k"/>
+                            <constraint firstItem="0ln-ir-e6P" firstAttribute="leading" secondItem="dkq-4B-wmM" secondAttribute="trailing" constant="16" id="skY-WB-SQ8"/>
+                            <constraint firstItem="hg3-eM-xsd" firstAttribute="bottom" secondItem="dkq-4B-wmM" secondAttribute="bottom" constant="32" id="xx7-DO-LzL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="hg3-eM-xsd"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Map" image="tab_map" id="nkG-RL-EG5"/>
+                    <connections>
+                        <outlet property="accuracyLabel" destination="e0k-Ec-BGz" id="i8q-14-IQo"/>
+                        <outlet property="contactButton" destination="dkq-4B-wmM" id="ukc-tH-7Rg"/>
+                        <outlet property="mapView" destination="NT9-yX-dTA" id="his-f1-L76"/>
+                        <outlet property="myLocationButton" destination="LXc-cP-DdP" id="BcJ-WA-XGb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kIR-8t-93U" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1231.8840579710145" y="-277.23214285714283"/>
+        </scene>
+        <!--Root View Controller-->
+        <scene sceneID="CvO-gS-00e">
+            <objects>
+                <tabBarController id="PhS-8S-v8H" customClass="RootViewController" customModule="OExTrace_DEV" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="KR4-1p-36V"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hmg-pn-smJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Ead-yP-mZy" kind="relationship" relationship="viewControllers" id="tJ4-aH-VEK"/>
+                        <segue destination="Ghp-dC-3Qn" kind="relationship" relationship="viewControllers" id="yAq-ev-1Gk"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XZv-I6-EzI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="317" y="47"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="outline_add_black_24pt" width="24" height="24"/>
+        <image name="outline_bluetooth_black_24pt" width="24" height="24"/>
+        <image name="outline_near_me_black_24pt" width="24" height="24"/>
+        <image name="outline_remove_black_24pt" width="24" height="24"/>
+        <image name="tab_map" width="24" height="24"/>
+        <image name="tab_status" width="24" height="24"/>
+    </resources>
 </document>

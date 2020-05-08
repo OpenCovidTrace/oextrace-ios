@@ -1,37 +1,239 @@
-//
-//  AppDelegate.swift
-//  oextrace
-//
-//  Created by Alexander Ivanov on 05.05.2020.
-//  Copyright © 2020 OpenExposureTrace. All rights reserved.
-//
-
 import UIKit
+import CoreLocation
+import Firebase
+import AlamofireNetworkActivityIndicator
+import DP3TSDK
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    
+    static let appName = "OExTrace"
+    
+    static let dateFormatter: DateFormatter = {
+        let dateFormatter = DateFormatter()
+        
+        dateFormatter.dateStyle = .long
+        dateFormatter.timeStyle = .medium
+        
+        return dateFormatter
+    }()
+    
+    static var deviceTokenEncoded: String?
+    
+    private static let makeContactCategory = "MAKE_CONTACT"
+    private static let tag = "APP"
+    
+    var window: UIWindow?
+    
+    func application(_ application: UIApplication,
+                     didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        /*
+         * Firebase
+         */
+        
+        FirebaseApp.configure()
+        
+        
+        /*
+         * Network indicator
+         */
+        
+        NetworkActivityIndicatorManager.shared.isEnabled = true
+        
+        
+        /*
+         * Notifications setup
+         */
+        
+        let makeContactMessageCategory = UNNotificationCategory(identifier: AppDelegate.makeContactCategory,
+                                                                actions: [],
+                                                                intentIdentifiers: [],
+                                                                options: .customDismissAction)
+        
+        let center = UNUserNotificationCenter.current()
+        
+        center.setNotificationCategories([makeContactMessageCategory])
+        center.delegate = self
+        
+        application.registerForRemoteNotifications()
+        
+        
+        /*
+         * Locaction updates
+         */
+        
+        LocationManager.initialize(self)
+        
+        
+        /*
+         * DP3T integration
+         */
+        
+        let dp3tBackendUrl = URL(string: "https://demo.dpppt.org/")!
+        do {
+            try DP3TTracing.initialize(
+                with: .manual(
+                    .init(appId: Bundle.main.bundleIdentifier!,
+                          bucketBaseUrl: dp3tBackendUrl,
+                          reportBaseUrl: dp3tBackendUrl,
+                          jwtPublicKey: nil)
+                )
+            )
+            
+            DP3TTracing.delegate = self
 
-
-
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+            logDp3t("Library initialized")
+        } catch {
+            logDp3t("Failed to initialize library: \(error.localizedDescription)")
+        }
+        
+        
+        logBt("App did finish launching")
+        
         return true
     }
-
-    // MARK: UISceneSession Lifecycle
-
-    func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
-        // Called when a new scene session is being created.
-        // Use this method to select a configuration to create the new scene with.
-        return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
+    
+    func application(_ application: UIApplication,
+                     continue userActivity: NSUserActivity,
+                     restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool {
+        
+        if userActivity.activityType == NSUserActivityTypeBrowsingWeb {
+            guard let url = userActivity.webpageURL else {
+                return true
+            }
+            
+            /*
+             Existing scheme:
+             https://HOST/.well-known/apple-app-site-association
+             */
+            if url.pathComponents.count == 3 && url.pathComponents[2] == "contact" {
+                if let rpi = url.valueOf("r"),
+                    let key = url.valueOf("k"),
+                    let token = url.valueOf("d"),
+                    let platform = url.valueOf("p"),
+                    let tst = url.valueOf("t") {
+                    self.withRootController { rootViewController in
+                        rootViewController.makeContact(
+                            rpi: rpi,
+                            key: key,
+                            token: token,
+                            platform: platform,
+                            tst: Int64(tst)!
+                        )
+                    }
+                }
+            }
+        }
+        
+        return true
     }
-
-    func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>) {
-        // Called when the user discards a scene session.
-        // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
-        // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
+    
+    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        // Transforming to format acceptable by backend
+        AppDelegate.deviceTokenEncoded = deviceToken.reduce("", { $0 + String(format: "%02X", $1) })
     }
-
-
+    
+    func applicationDidEnterBackground(_ application: UIApplication) {
+        // This is called in order for viewWillDisappear to be executed
+        self.window?.rootViewController?.beginAppearanceTransition(false, animated: false)
+        self.window?.rootViewController?.endAppearanceTransition()
+        
+        LocationManager.updateAccuracy(foreground: false)
+        
+        print("App did enter background")
+        logBt("App did enter background")
+    }
+    
+    func applicationWillEnterForeground(_ application: UIApplication) {
+        print("App will enter foreground")
+        logBt("App will enter foreground")
+        
+        LocationManager.updateAccuracy(foreground: true)
+        
+        // This is called in order for viewWillAppear to be executed
+        self.window?.rootViewController?.beginAppearanceTransition(true, animated: false)
+        self.window?.rootViewController?.endAppearanceTransition()
+    }
+    
+    private func logBt(_ text: String) {
+        BtLogsManager.append(tag: AppDelegate.tag, text: text)
+    }
+    
+    private func logDp3t(_ text: String) {
+        Dp3tLogsManager.append(text)
+    }
 }
 
+extension AppDelegate: CLLocationManagerDelegate {
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if let location = locations.last {
+            LocationManager.updateLocation(location)
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        if status == .authorizedAlways || status == .authorizedWhenInUse {
+            LocationManager.startUpdatingLocation()
+        }
+    }
+    
+}
+
+extension AppDelegate: UNUserNotificationCenterDelegate {
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter,
+                                didReceive response: UNNotificationResponse,
+                                withCompletionHandler completionHandler: @escaping () -> Void) {
+        let userInfo = response.notification.request.content.userInfo
+        
+        if response.notification.request.content.categoryIdentifier == AppDelegate.makeContactCategory {
+            let secret = userInfo["secret"] as! String
+            let tst = userInfo["tst"] as! Int64
+            
+            if let key = EncryptionKeysManager.encryptionKeys[tst] {
+                let secretData = Data(base64Encoded: secret)!
+                
+                let rollingId = CryptoUtil.decodeAES(secretData.prefix(CryptoUtil.keyLength), with: key)
+                let meta = CryptoUtil.decodeAES(secretData.suffix(CryptoUtil.keyLength), with: key)
+                
+                let contact = QrContact(rollingId.base64EncodedString(), meta)
+                
+                QrContactsManager.addContact(contact)
+                
+                if let qrLinkViewController = QrLinkViewController.instance {
+                    qrLinkViewController.dismiss(animated: true, completion: nil)
+                }
+            }
+        }
+        
+        completionHandler()
+    }
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter,
+                                willPresent notification: UNNotification,
+                                withCompletionHandler completionHandler:
+        @escaping (UNNotificationPresentationOptions) -> Swift.Void) {
+        completionHandler([.alert, .sound])
+    }
+    
+    private func withRootController(_ handler: (RootViewController) -> Void) {
+        if let navigationController = self.window?.rootViewController as? UINavigationController {
+            _ = navigationController.popToRootViewController(animated: false)
+            let rootViewController = navigationController.topViewController as! RootViewController
+            
+            handler(rootViewController)
+        }
+    }
+    
+}
+
+extension AppDelegate: DP3TTracingDelegate {
+    
+    func DP3TTracingStateChanged(_ state: TracingState) {
+        logDp3t("Tracing state changed: \(state)")
+    }
+    
+}

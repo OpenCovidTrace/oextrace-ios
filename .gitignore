@@ -1,0 +1,5 @@
+oextrace.xcodeproj/xcuserdata/
+oextrace.xcodeproj/project.xcworkspace/xcuserdata
+oextrace.xcworkspace/
+Pods/
+*.generated.swift

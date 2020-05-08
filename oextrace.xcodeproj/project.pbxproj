@@ -3,17 +3,55 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0BBC80D0DE56E29BE3C8C417 /* Pods_oextrace.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D4545DC893EFE0201145213 /* Pods_oextrace.framework */; };
+		FA0F3801246582B70080B91B /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = FA0F37FF246582B60080B91B /* README.md */; };
 		FA314B9E24619EC700852AE2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314B9D24619EC700852AE2 /* AppDelegate.swift */; };
-		FA314BA024619EC700852AE2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314B9F24619EC700852AE2 /* SceneDelegate.swift */; };
-		FA314BA224619EC700852AE2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314BA124619EC700852AE2 /* ViewController.swift */; };
 		FA314BA524619EC700852AE2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA314BA324619EC700852AE2 /* Main.storyboard */; };
 		FA314BA724619ECA00852AE2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA314BA624619ECA00852AE2 /* Assets.xcassets */; };
 		FA314BAA24619ECA00852AE2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA314BA824619ECA00852AE2 /* LaunchScreen.storyboard */; };
 		FA314BB524619ECA00852AE2 /* oextraceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314BB424619ECA00852AE2 /* oextraceTests.swift */; };
+		FA314BC12461A94100852AE2 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA314BC02461A94100852AE2 /* MapKit.framework */; };
+		FA314BF52461ADFF00852AE2 /* NetworkUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314BCB2461ADFE00852AE2 /* NetworkUtil.swift */; };
+		FA314BF62461ADFF00852AE2 /* CryptoUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314BCC2461ADFE00852AE2 /* CryptoUtil.swift */; };
+		FA314BF72461ADFF00852AE2 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314BCF2461ADFE00852AE2 /* LocationManager.swift */; };
+		FA314BF82461ADFF00852AE2 /* BtAdvertisingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314BD12461ADFE00852AE2 /* BtAdvertisingManager.swift */; };
+		FA314BF92461ADFF00852AE2 /* BtScanningManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314BD22461ADFE00852AE2 /* BtScanningManager.swift */; };
+		FA314BFA2461ADFF00852AE2 /* BtServiceDefinition.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314BD32461ADFE00852AE2 /* BtServiceDefinition.swift */; };
+		FA314BFB2461ADFF00852AE2 /* PeripheralDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314BD42461ADFE00852AE2 /* PeripheralDevice.swift */; };
+		FA314BFC2461ADFF00852AE2 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314BD62461ADFE00852AE2 /* DataManager.swift */; };
+		FA314BFD2461ADFF00852AE2 /* OnboardingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314BD72461ADFE00852AE2 /* OnboardingManager.swift */; };
+		FA314BFE2461ADFF00852AE2 /* QrContactsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314BD82461ADFE00852AE2 /* QrContactsManager.swift */; };
+		FA314BFF2461ADFF00852AE2 /* LocationIndexManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314BD92461ADFE00852AE2 /* LocationIndexManager.swift */; };
+		FA314C002461ADFF00852AE2 /* KeysManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314BDA2461ADFE00852AE2 /* KeysManager.swift */; };
+		FA314C012461ADFF00852AE2 /* EncryptionKeysManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314BDB2461ADFE00852AE2 /* EncryptionKeysManager.swift */; };
+		FA314C022461ADFF00852AE2 /* TrackingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314BDC2461ADFE00852AE2 /* TrackingManager.swift */; };
+		FA314C032461ADFF00852AE2 /* LocationBordersManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314BDD2461ADFE00852AE2 /* LocationBordersManager.swift */; };
+		FA314C042461ADFF00852AE2 /* TracksManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314BDE2461ADFE00852AE2 /* TracksManager.swift */; };
+		FA314C052461ADFF00852AE2 /* UserStatusManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314BDF2461ADFE00852AE2 /* UserStatusManager.swift */; };
+		FA314C062461ADFF00852AE2 /* BtLogsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314BE02461ADFE00852AE2 /* BtLogsManager.swift */; };
+		FA314C072461ADFF00852AE2 /* BtContactsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314BE12461ADFE00852AE2 /* BtContactsManager.swift */; };
+		FA314C082461ADFF00852AE2 /* Dp3tLogsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314BE22461ADFE00852AE2 /* Dp3tLogsManager.swift */; };
+		FA314C092461ADFF00852AE2 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314BE42461ADFF00852AE2 /* RoundButton.swift */; };
+		FA314C0B2461ADFF00852AE2 /* ControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314BE72461ADFF00852AE2 /* ControllerExtension.swift */; };
+		FA314C0F2461ADFF00852AE2 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314BEB2461ADFF00852AE2 /* RootViewController.swift */; };
+		FA314C102461ADFF00852AE2 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314BEC2461ADFF00852AE2 /* MapViewController.swift */; };
+		FA314C172461ADFF00852AE2 /* StatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314BF32461ADFF00852AE2 /* StatusViewController.swift */; };
+		FA314C182461ADFF00852AE2 /* IndicatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314BF42461ADFF00852AE2 /* IndicatorViewController.swift */; };
+		FA314C1B2461AF1200852AE2 /* Dp3tLogsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314C192461AF1200852AE2 /* Dp3tLogsViewController.swift */; };
+		FA314C1C2461AF1200852AE2 /* Dp3tLogsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA314C1A2461AF1200852AE2 /* Dp3tLogsViewController.xib */; };
+		FA314C1F2461AF2300852AE2 /* BtLogsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314C1D2461AF2300852AE2 /* BtLogsViewController.swift */; };
+		FA314C202461AF2300852AE2 /* BtLogsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA314C1E2461AF2300852AE2 /* BtLogsViewController.xib */; };
+		FA314C232461AF3900852AE2 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314C212461AF3900852AE2 /* OnboardingViewController.swift */; };
+		FA314C242461AF3900852AE2 /* OnboardingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA314C222461AF3900852AE2 /* OnboardingViewController.xib */; };
+		FA314C272461AF4800852AE2 /* QrLinkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314C252461AF4800852AE2 /* QrLinkViewController.swift */; };
+		FA314C282461AF4800852AE2 /* QrLinkViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA314C262461AF4800852AE2 /* QrLinkViewController.xib */; };
+		FA314C2A2461B01F00852AE2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FA314C292461B01F00852AE2 /* Localizable.strings */; };
+		FA314C2C2461B0BB00852AE2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FA314C2B2461B0BB00852AE2 /* GoogleService-Info.plist */; };
+		FA314C2E2461B26A00852AE2 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314C2D2461B26A00852AE2 /* R.generated.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,10 +65,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		FA314B9A24619EC700852AE2 /* oextrace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = oextrace.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0E8C424996CDB9ADB6ED7379 /* Pods-oextrace.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-oextrace.release.xcconfig"; path = "Target Support Files/Pods-oextrace/Pods-oextrace.release.xcconfig"; sourceTree = "<group>"; };
+		40722C0D5DC4FD64E6438527 /* Pods-oextrace.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-oextrace.debug.xcconfig"; path = "Target Support Files/Pods-oextrace/Pods-oextrace.debug.xcconfig"; sourceTree = "<group>"; };
+		8D4545DC893EFE0201145213 /* Pods_oextrace.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_oextrace.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA0F37FF246582B60080B91B /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		FA314B9A24619EC700852AE2 /* OExTrace DEV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OExTrace DEV.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA314B9D24619EC700852AE2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FA314B9F24619EC700852AE2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FA314BA124619EC700852AE2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FA314BA424619EC700852AE2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FA314BA624619ECA00852AE2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA314BA924619ECA00852AE2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -38,6 +78,45 @@
 		FA314BB024619ECA00852AE2 /* oextraceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = oextraceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA314BB424619ECA00852AE2 /* oextraceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = oextraceTests.swift; sourceTree = "<group>"; };
 		FA314BB624619ECA00852AE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA314BBF2461A94000852AE2 /* OExTrace.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OExTrace.entitlements; sourceTree = "<group>"; };
+		FA314BC02461A94100852AE2 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		FA314BCB2461ADFE00852AE2 /* NetworkUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkUtil.swift; sourceTree = "<group>"; };
+		FA314BCC2461ADFE00852AE2 /* CryptoUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CryptoUtil.swift; sourceTree = "<group>"; };
+		FA314BCF2461ADFE00852AE2 /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		FA314BD12461ADFE00852AE2 /* BtAdvertisingManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BtAdvertisingManager.swift; sourceTree = "<group>"; };
+		FA314BD22461ADFE00852AE2 /* BtScanningManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BtScanningManager.swift; sourceTree = "<group>"; };
+		FA314BD32461ADFE00852AE2 /* BtServiceDefinition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BtServiceDefinition.swift; sourceTree = "<group>"; };
+		FA314BD42461ADFE00852AE2 /* PeripheralDevice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeripheralDevice.swift; sourceTree = "<group>"; };
+		FA314BD62461ADFE00852AE2 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		FA314BD72461ADFE00852AE2 /* OnboardingManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingManager.swift; sourceTree = "<group>"; };
+		FA314BD82461ADFE00852AE2 /* QrContactsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QrContactsManager.swift; sourceTree = "<group>"; };
+		FA314BD92461ADFE00852AE2 /* LocationIndexManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationIndexManager.swift; sourceTree = "<group>"; };
+		FA314BDA2461ADFE00852AE2 /* KeysManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeysManager.swift; sourceTree = "<group>"; };
+		FA314BDB2461ADFE00852AE2 /* EncryptionKeysManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EncryptionKeysManager.swift; sourceTree = "<group>"; };
+		FA314BDC2461ADFE00852AE2 /* TrackingManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackingManager.swift; sourceTree = "<group>"; };
+		FA314BDD2461ADFE00852AE2 /* LocationBordersManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationBordersManager.swift; sourceTree = "<group>"; };
+		FA314BDE2461ADFE00852AE2 /* TracksManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TracksManager.swift; sourceTree = "<group>"; };
+		FA314BDF2461ADFE00852AE2 /* UserStatusManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserStatusManager.swift; sourceTree = "<group>"; };
+		FA314BE02461ADFE00852AE2 /* BtLogsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BtLogsManager.swift; sourceTree = "<group>"; };
+		FA314BE12461ADFE00852AE2 /* BtContactsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BtContactsManager.swift; sourceTree = "<group>"; };
+		FA314BE22461ADFE00852AE2 /* Dp3tLogsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dp3tLogsManager.swift; sourceTree = "<group>"; };
+		FA314BE42461ADFF00852AE2 /* RoundButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
+		FA314BE72461ADFF00852AE2 /* ControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControllerExtension.swift; sourceTree = "<group>"; };
+		FA314BEB2461ADFF00852AE2 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		FA314BEC2461ADFF00852AE2 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		FA314BF32461ADFF00852AE2 /* StatusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusViewController.swift; sourceTree = "<group>"; };
+		FA314BF42461ADFF00852AE2 /* IndicatorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndicatorViewController.swift; sourceTree = "<group>"; };
+		FA314C192461AF1200852AE2 /* Dp3tLogsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dp3tLogsViewController.swift; sourceTree = "<group>"; };
+		FA314C1A2461AF1200852AE2 /* Dp3tLogsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Dp3tLogsViewController.xib; sourceTree = "<group>"; };
+		FA314C1D2461AF2300852AE2 /* BtLogsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BtLogsViewController.swift; sourceTree = "<group>"; };
+		FA314C1E2461AF2300852AE2 /* BtLogsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BtLogsViewController.xib; sourceTree = "<group>"; };
+		FA314C212461AF3900852AE2 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		FA314C222461AF3900852AE2 /* OnboardingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnboardingViewController.xib; sourceTree = "<group>"; };
+		FA314C252461AF4800852AE2 /* QrLinkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QrLinkViewController.swift; sourceTree = "<group>"; };
+		FA314C262461AF4800852AE2 /* QrLinkViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QrLinkViewController.xib; sourceTree = "<group>"; };
+		FA314C292461B01F00852AE2 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		FA314C2B2461B0BB00852AE2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FA314C2D2461B26A00852AE2 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +124,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA314BC12461A94100852AE2 /* MapKit.framework in Frameworks */,
+				0BBC80D0DE56E29BE3C8C417 /* Pods_oextrace.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,19 +139,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1D6F4E1563B6C0328A85D577 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				40722C0D5DC4FD64E6438527 /* Pods-oextrace.debug.xcconfig */,
+				0E8C424996CDB9ADB6ED7379 /* Pods-oextrace.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		77BA7763B9EF00BF60B4B37F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FA314BC02461A94100852AE2 /* MapKit.framework */,
+				8D4545DC893EFE0201145213 /* Pods_oextrace.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FA314B9124619EC700852AE2 = {
 			isa = PBXGroup;
 			children = (
+				FA0F37FF246582B60080B91B /* README.md */,
+				FA314C2D2461B26A00852AE2 /* R.generated.swift */,
 				FA314B9C24619EC700852AE2 /* oextrace */,
 				FA314BB324619ECA00852AE2 /* oextraceTests */,
 				FA314B9B24619EC700852AE2 /* Products */,
+				1D6F4E1563B6C0328A85D577 /* Pods */,
+				77BA7763B9EF00BF60B4B37F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		FA314B9B24619EC700852AE2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FA314B9A24619EC700852AE2 /* oextrace.app */,
+				FA314B9A24619EC700852AE2 /* OExTrace DEV.app */,
 				FA314BB024619ECA00852AE2 /* oextraceTests.xctest */,
 			);
 			name = Products;
@@ -79,13 +182,17 @@
 		FA314B9C24619EC700852AE2 /* oextrace */ = {
 			isa = PBXGroup;
 			children = (
+				FA314BBF2461A94000852AE2 /* OExTrace.entitlements */,
+				FA314C2B2461B0BB00852AE2 /* GoogleService-Info.plist */,
+				FA314BAB24619ECA00852AE2 /* Info.plist */,
+				FA314C292461B01F00852AE2 /* Localizable.strings */,
 				FA314B9D24619EC700852AE2 /* AppDelegate.swift */,
-				FA314B9F24619EC700852AE2 /* SceneDelegate.swift */,
-				FA314BA124619EC700852AE2 /* ViewController.swift */,
-				FA314BA324619EC700852AE2 /* Main.storyboard */,
 				FA314BA624619ECA00852AE2 /* Assets.xcassets */,
 				FA314BA824619ECA00852AE2 /* LaunchScreen.storyboard */,
-				FA314BAB24619ECA00852AE2 /* Info.plist */,
+				FA314BA324619EC700852AE2 /* Main.storyboard */,
+				FA314BCD2461ADFE00852AE2 /* Services */,
+				FA314BE32461ADFF00852AE2 /* UI */,
+				FA314BCA2461ADFE00852AE2 /* Util */,
 			);
 			path = oextrace;
 			sourceTree = "<group>";
@@ -99,6 +206,93 @@
 			path = oextraceTests;
 			sourceTree = "<group>";
 		};
+		FA314BCA2461ADFE00852AE2 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				FA314BCB2461ADFE00852AE2 /* NetworkUtil.swift */,
+				FA314BCC2461ADFE00852AE2 /* CryptoUtil.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		FA314BCD2461ADFE00852AE2 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				FA314BCE2461ADFE00852AE2 /* Location */,
+				FA314BD02461ADFE00852AE2 /* Bluetooth */,
+				FA314BD52461ADFE00852AE2 /* Persistence */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		FA314BCE2461ADFE00852AE2 /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				FA314BCF2461ADFE00852AE2 /* LocationManager.swift */,
+			);
+			path = Location;
+			sourceTree = "<group>";
+		};
+		FA314BD02461ADFE00852AE2 /* Bluetooth */ = {
+			isa = PBXGroup;
+			children = (
+				FA314BD12461ADFE00852AE2 /* BtAdvertisingManager.swift */,
+				FA314BD22461ADFE00852AE2 /* BtScanningManager.swift */,
+				FA314BD32461ADFE00852AE2 /* BtServiceDefinition.swift */,
+				FA314BD42461ADFE00852AE2 /* PeripheralDevice.swift */,
+			);
+			path = Bluetooth;
+			sourceTree = "<group>";
+		};
+		FA314BD52461ADFE00852AE2 /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				FA314BD62461ADFE00852AE2 /* DataManager.swift */,
+				FA314BD72461ADFE00852AE2 /* OnboardingManager.swift */,
+				FA314BD82461ADFE00852AE2 /* QrContactsManager.swift */,
+				FA314BD92461ADFE00852AE2 /* LocationIndexManager.swift */,
+				FA314BDA2461ADFE00852AE2 /* KeysManager.swift */,
+				FA314BDB2461ADFE00852AE2 /* EncryptionKeysManager.swift */,
+				FA314BDC2461ADFE00852AE2 /* TrackingManager.swift */,
+				FA314BDD2461ADFE00852AE2 /* LocationBordersManager.swift */,
+				FA314BDE2461ADFE00852AE2 /* TracksManager.swift */,
+				FA314BDF2461ADFE00852AE2 /* UserStatusManager.swift */,
+				FA314BE02461ADFE00852AE2 /* BtLogsManager.swift */,
+				FA314BE12461ADFE00852AE2 /* BtContactsManager.swift */,
+				FA314BE22461ADFE00852AE2 /* Dp3tLogsManager.swift */,
+			);
+			path = Persistence;
+			sourceTree = "<group>";
+		};
+		FA314BE32461ADFF00852AE2 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				FA314BE42461ADFF00852AE2 /* RoundButton.swift */,
+				FA314BE52461ADFF00852AE2 /* Controllers */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		FA314BE52461ADFF00852AE2 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FA314C1D2461AF2300852AE2 /* BtLogsViewController.swift */,
+				FA314BE72461ADFF00852AE2 /* ControllerExtension.swift */,
+				FA314C192461AF1200852AE2 /* Dp3tLogsViewController.swift */,
+				FA314BF42461ADFF00852AE2 /* IndicatorViewController.swift */,
+				FA314BEC2461ADFF00852AE2 /* MapViewController.swift */,
+				FA314C212461AF3900852AE2 /* OnboardingViewController.swift */,
+				FA314C252461AF4800852AE2 /* QrLinkViewController.swift */,
+				FA314BEB2461ADFF00852AE2 /* RootViewController.swift */,
+				FA314BF32461ADFF00852AE2 /* StatusViewController.swift */,
+				FA314C1E2461AF2300852AE2 /* BtLogsViewController.xib */,
+				FA314C1A2461AF1200852AE2 /* Dp3tLogsViewController.xib */,
+				FA314C222461AF3900852AE2 /* OnboardingViewController.xib */,
+				FA314C262461AF4800852AE2 /* QrLinkViewController.xib */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -106,9 +300,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FA314BB924619ECA00852AE2 /* Build configuration list for PBXNativeTarget "oextrace" */;
 			buildPhases = (
+				6B1CF743B1555B67332F6374 /* [CP] Check Pods Manifest.lock */,
+				FA314BC22461ACE900852AE2 /* ShellScript */,
 				FA314B9624619EC700852AE2 /* Sources */,
 				FA314B9724619EC700852AE2 /* Frameworks */,
 				FA314B9824619EC700852AE2 /* Resources */,
+				CF8952735BD2D06CEF481307 /* [CP] Embed Pods Frameworks */,
+				FA314BC32461AD8500852AE2 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -116,7 +314,7 @@
 			);
 			name = oextrace;
 			productName = oextrace;
-			productReference = FA314B9A24619EC700852AE2 /* oextrace.app */;
+			productReference = FA314B9A24619EC700852AE2 /* OExTrace DEV.app */;
 			productType = "com.apple.product-type.application";
 		};
 		FA314BAF24619ECA00852AE2 /* oextraceTests */ = {
@@ -181,8 +379,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA314BAA24619ECA00852AE2 /* LaunchScreen.storyboard in Resources */,
+				FA314C202461AF2300852AE2 /* BtLogsViewController.xib in Resources */,
+				FA0F3801246582B70080B91B /* README.md in Resources */,
+				FA314C2C2461B0BB00852AE2 /* GoogleService-Info.plist in Resources */,
 				FA314BA724619ECA00852AE2 /* Assets.xcassets in Resources */,
+				FA314C1C2461AF1200852AE2 /* Dp3tLogsViewController.xib in Resources */,
 				FA314BA524619EC700852AE2 /* Main.storyboard in Resources */,
+				FA314C2A2461B01F00852AE2 /* Localizable.strings in Resources */,
+				FA314C242461AF3900852AE2 /* OnboardingViewController.xib in Resources */,
+				FA314C282461AF4800852AE2 /* QrLinkViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,14 +400,121 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6B1CF743B1555B67332F6374 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-oextrace-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CF8952735BD2D06CEF481307 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-oextrace/Pods-oextrace-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-oextrace/Pods-oextrace-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-oextrace/Pods-oextrace-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FA314BC22461ACE900852AE2 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$TEMP_DIR/rswift-lastrun",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\n";
+		};
+		FA314BC32461AD8500852AE2 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		FA314B9624619EC700852AE2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA314BA224619EC700852AE2 /* ViewController.swift in Sources */,
+				FA314BF72461ADFF00852AE2 /* LocationManager.swift in Sources */,
+				FA314BFF2461ADFF00852AE2 /* LocationIndexManager.swift in Sources */,
+				FA314BFA2461ADFF00852AE2 /* BtServiceDefinition.swift in Sources */,
+				FA314BFD2461ADFF00852AE2 /* OnboardingManager.swift in Sources */,
+				FA314C0F2461ADFF00852AE2 /* RootViewController.swift in Sources */,
+				FA314C092461ADFF00852AE2 /* RoundButton.swift in Sources */,
+				FA314BF52461ADFF00852AE2 /* NetworkUtil.swift in Sources */,
+				FA314C232461AF3900852AE2 /* OnboardingViewController.swift in Sources */,
 				FA314B9E24619EC700852AE2 /* AppDelegate.swift in Sources */,
-				FA314BA024619EC700852AE2 /* SceneDelegate.swift in Sources */,
+				FA314BF82461ADFF00852AE2 /* BtAdvertisingManager.swift in Sources */,
+				FA314C1F2461AF2300852AE2 /* BtLogsViewController.swift in Sources */,
+				FA314C182461ADFF00852AE2 /* IndicatorViewController.swift in Sources */,
+				FA314C062461ADFF00852AE2 /* BtLogsManager.swift in Sources */,
+				FA314BFB2461ADFF00852AE2 /* PeripheralDevice.swift in Sources */,
+				FA314C082461ADFF00852AE2 /* Dp3tLogsManager.swift in Sources */,
+				FA314BF92461ADFF00852AE2 /* BtScanningManager.swift in Sources */,
+				FA314C022461ADFF00852AE2 /* TrackingManager.swift in Sources */,
+				FA314BFC2461ADFF00852AE2 /* DataManager.swift in Sources */,
+				FA314C012461ADFF00852AE2 /* EncryptionKeysManager.swift in Sources */,
+				FA314C272461AF4800852AE2 /* QrLinkViewController.swift in Sources */,
+				FA314C052461ADFF00852AE2 /* UserStatusManager.swift in Sources */,
+				FA314C032461ADFF00852AE2 /* LocationBordersManager.swift in Sources */,
+				FA314C042461ADFF00852AE2 /* TracksManager.swift in Sources */,
+				FA314BF62461ADFF00852AE2 /* CryptoUtil.swift in Sources */,
+				FA314C172461ADFF00852AE2 /* StatusViewController.swift in Sources */,
+				FA314C1B2461AF1200852AE2 /* Dp3tLogsViewController.swift in Sources */,
+				FA314C0B2461ADFF00852AE2 /* ControllerExtension.swift in Sources */,
+				FA314C2E2461B26A00852AE2 /* R.generated.swift in Sources */,
+				FA314C102461ADFF00852AE2 /* MapViewController.swift in Sources */,
+				FA314BFE2461ADFF00852AE2 /* QrContactsManager.swift in Sources */,
+				FA314C072461ADFF00852AE2 /* BtContactsManager.swift in Sources */,
+				FA314C002461ADFF00852AE2 /* KeysManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,17 +672,21 @@
 		};
 		FA314BBA24619ECA00852AE2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 40722C0D5DC4FD64E6438527 /* Pods-oextrace.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = oextrace/OExTrace.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S5ENNERNQZ;
 				INFOPLIST_FILE = oextrace/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = org.openexposuretrace.oextrace;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				MARKETING_VERSION = 0.0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = org.openexposuretrace.oextrace.dev;
+				PRODUCT_NAME = "OExTrace DEV";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -378,17 +694,21 @@
 		};
 		FA314BBB24619ECA00852AE2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0E8C424996CDB9ADB6ED7379 /* Pods-oextrace.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = oextrace/OExTrace.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S5ENNERNQZ;
 				INFOPLIST_FILE = oextrace/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = org.openexposuretrace.oextrace;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				MARKETING_VERSION = 0.0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = org.openexposuretrace.oextrace.dev;
+				PRODUCT_NAME = "OExTrace DEV";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
