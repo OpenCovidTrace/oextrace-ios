@@ -112,7 +112,7 @@
 "status_title" = "Current status: %@";
 
 /* Status type */
-"symptoms_status" = "Symptoms";
+"exposed" = "Exposed";
 
 /* Button title */
 "whats_next_button" = "What's next?";
@@ -120,5 +120,5 @@
 /* Status type */
 "healthy" = "Healthy";
 
-/* Got symptoms button */
-"got_symptoms_button" = "I got symptoms :(";
+/* Got exposed button */
+"exposed_button" = "I got exposed :(";

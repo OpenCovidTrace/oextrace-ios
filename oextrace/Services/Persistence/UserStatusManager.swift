@@ -5,7 +5,7 @@ class UserStatusManager {
     private static let kUserStatus = "kUserStatus"
     
     static let healthy = "healthy"
-    static let symptoms = "symptoms"
+    static let exposed = "exposed"
     
     private init() {
     }
@@ -21,7 +21,7 @@ class UserStatusManager {
     }
     
     static func sick() -> Bool {
-        return status == symptoms
+        return status == exposed
     }
     
 }

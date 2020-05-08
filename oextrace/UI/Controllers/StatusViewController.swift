@@ -11,7 +11,7 @@ class StatusViewController: IndicatorViewController {
             showInfo(R.string.localizable.new_statuses_disclaimer())
         } else {
             confirm(R.string.localizable.report_exposure_confirmation()) {
-                self.updateUserStatus(UserStatusManager.symptoms)
+                self.updateUserStatus(UserStatusManager.exposed)
             }
         }
         
@@ -36,14 +36,14 @@ class StatusViewController: IndicatorViewController {
     private func refreshStatus() {
         let status: String
         if UserStatusManager.sick() {
-            status = R.string.localizable.symptoms_status()
+            status = R.string.localizable.exposed()
 
             statusButton.setTitle(R.string.localizable.whats_next_button(), for: .normal)
             statusButton.backgroundColor = .systemGreen
         } else {
             status = R.string.localizable.healthy()
             
-            statusButton.setTitle(R.string.localizable.got_symptoms_button(), for: .normal)
+            statusButton.setTitle(R.string.localizable.exposed_button(), for: .normal)
             statusButton.backgroundColor = .systemRed
         }
 

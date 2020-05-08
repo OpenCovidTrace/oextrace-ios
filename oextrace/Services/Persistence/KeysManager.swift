@@ -111,7 +111,7 @@ class KeysManager {
         }
         
         if includeToday {
-            // Include key for today when reporting symptoms
+            // Include key for today when reporting exposure
             // This key will be uploaded again next day with updated borders
             addKey(for: currentDayNumber)
         }
