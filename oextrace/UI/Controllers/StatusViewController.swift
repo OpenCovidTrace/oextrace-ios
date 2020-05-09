@@ -41,7 +41,7 @@ class StatusViewController: IndicatorViewController {
             statusButton.setTitle(R.string.localizable.whats_next_button(), for: .normal)
             statusButton.backgroundColor = .systemGreen
         } else {
-            status = R.string.localizable.healthy()
+            status = R.string.localizable.normal()
             
             statusButton.setTitle(R.string.localizable.exposed_button(), for: .normal)
             statusButton.backgroundColor = .systemRed

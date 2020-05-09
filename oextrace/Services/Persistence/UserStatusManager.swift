@@ -4,7 +4,7 @@ class UserStatusManager {
     
     private static let kUserStatus = "kUserStatus"
     
-    static let healthy = "healthy"
+    static let normal = "normal"
     static let exposed = "exposed"
     
     private init() {
@@ -12,7 +12,7 @@ class UserStatusManager {
 
     static var status: String {
         get {
-            UserDefaults.standard.string(forKey: kUserStatus) ?? healthy
+            UserDefaults.standard.string(forKey: kUserStatus) ?? normal
         }
         
         set {

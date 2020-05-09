@@ -118,7 +118,7 @@
 "whats_next_button" = "What's next?";
 
 /* Status type */
-"healthy" = "Healthy";
+"normal" = "Normal";
 
 /* Got exposed button */
 "exposed_button" = "I got exposed :(";
