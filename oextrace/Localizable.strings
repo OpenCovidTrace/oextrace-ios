@@ -64,7 +64,6 @@
 "no_thanks_button" = "No, thanks";
 
 "notifications_disabled" = "Need to enable notifications in Settings.";
-"enable_notifications_request" = "You need to enable notifications first, would you like to do it now?";
 
 /* Number of cases on the map tooltip */
 "count_cases" = "%d cases";
