@@ -163,22 +163,6 @@
                                     <action selector="makeContact:" destination="Ead-yP-mZy" eventType="touchUpInside" id="z2f-xg-9fi"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" alpha="0.64999997615814209" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dAL-og-XTC" customClass="RoundButton" customModule="OExTrace_DEV" customModuleProvider="target">
-                                <rect key="frame" x="358" y="685" width="40" height="40"/>
-                                <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="PVC-I0-hnZ"/>
-                                    <constraint firstAttribute="height" constant="40" id="Z0k-I0-zeq"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="xeQ-fy-4fV"/>
-                                    <constraint firstAttribute="width" constant="40" id="zio-dU-b3R"/>
-                                </constraints>
-                                <state key="normal" title="D">
-                                    <color key="titleColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="openDp3tLog:" destination="Ead-yP-mZy" eventType="touchUpInside" id="6mu-o0-WJF"/>
-                                </connections>
-                            </button>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e0k-Ec-BGz">
                                 <rect key="frame" x="190.5" y="789" width="33" height="16"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
@@ -192,7 +176,6 @@
                             <constraint firstAttribute="trailing" secondItem="NT9-yX-dTA" secondAttribute="trailing" id="79f-3r-nfP"/>
                             <constraint firstItem="e0k-Ec-BGz" firstAttribute="top" secondItem="dkq-4B-wmM" secondAttribute="bottom" constant="8" id="Frt-UY-GXR"/>
                             <constraint firstItem="NT9-yX-dTA" firstAttribute="top" secondItem="g17-sM-bDC" secondAttribute="top" id="IDm-ck-iXH"/>
-                            <constraint firstItem="hg3-eM-xsd" firstAttribute="trailing" secondItem="dAL-og-XTC" secondAttribute="trailing" constant="16" id="QHA-9R-hDF"/>
                             <constraint firstItem="0ln-ir-e6P" firstAttribute="bottom" secondItem="dkq-4B-wmM" secondAttribute="bottom" id="QSb-ra-lKo"/>
                             <constraint firstItem="tEJ-Di-iY8" firstAttribute="top" secondItem="GKY-C2-Tma" secondAttribute="bottom" constant="8" id="V28-SA-FIv"/>
                             <constraint firstItem="LXc-cP-DdP" firstAttribute="bottom" secondItem="dkq-4B-wmM" secondAttribute="bottom" id="YN3-ZE-sz2"/>
@@ -203,7 +186,6 @@
                             <constraint firstItem="LXc-cP-DdP" firstAttribute="leading" secondItem="hg3-eM-xsd" secondAttribute="leading" constant="16" id="fcD-BL-VyA"/>
                             <constraint firstItem="hg3-eM-xsd" firstAttribute="trailing" secondItem="0ln-ir-e6P" secondAttribute="trailing" constant="16" id="hTx-gx-iXY"/>
                             <constraint firstItem="e0k-Ec-BGz" firstAttribute="centerX" secondItem="g17-sM-bDC" secondAttribute="centerX" id="i44-f0-nLX"/>
-                            <constraint firstItem="0ln-ir-e6P" firstAttribute="top" secondItem="dAL-og-XTC" secondAttribute="bottom" constant="16" id="kIQ-cI-wsw"/>
                             <constraint firstItem="NT9-yX-dTA" firstAttribute="leading" secondItem="g17-sM-bDC" secondAttribute="leading" id="moa-eI-F1k"/>
                             <constraint firstItem="0ln-ir-e6P" firstAttribute="leading" secondItem="dkq-4B-wmM" secondAttribute="trailing" constant="16" id="skY-WB-SQ8"/>
                             <constraint firstItem="hg3-eM-xsd" firstAttribute="bottom" secondItem="dkq-4B-wmM" secondAttribute="bottom" constant="32" id="xx7-DO-LzL"/>

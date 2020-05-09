@@ -40,12 +40,6 @@ class MapViewController: UIViewController {
         rootViewController.navigationController?.present(logsController, animated: true)
     }
     
-    @IBAction func openDp3tLog(_ sender: Any) {
-        let logsController = Dp3tLogsViewController(nib: R.nib.dp3tLogsViewController)
-        
-        rootViewController.navigationController?.present(logsController, animated: true)
-    }
-    
     @IBAction func makeContact(_ sender: Any) {
         UNUserNotificationCenter.current().getNotificationSettings { settings in
             DispatchQueue.main.async {

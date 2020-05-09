@@ -2,7 +2,6 @@ import UIKit
 import CoreLocation
 import Firebase
 import AlamofireNetworkActivityIndicator
-import DP3TSDK
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -63,29 +62,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
          */
         
         LocationManager.initialize(self)
-        
-        
-        /*
-         * DP3T integration
-         */
-        
-        let dp3tBackendUrl = URL(string: "https://demo.dpppt.org/")!
-        do {
-            try DP3TTracing.initialize(
-                with: .manual(
-                    .init(appId: Bundle.main.bundleIdentifier!,
-                          bucketBaseUrl: dp3tBackendUrl,
-                          reportBaseUrl: dp3tBackendUrl,
-                          jwtPublicKey: nil)
-                )
-            )
-            
-            DP3TTracing.delegate = self
-
-            logDp3t("Library initialized")
-        } catch {
-            logDp3t("Failed to initialize library: \(error.localizedDescription)")
-        }
         
         
         logBt("App did finish launching")
@@ -157,11 +133,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     private func logBt(_ text: String) {
         BtLogsManager.append(tag: AppDelegate.tag, text: text)
-    }
-    
-    private func logDp3t(_ text: String) {
-        Dp3tLogsManager.append(text)
-    }
+    }    
 }
 
 extension AppDelegate: CLLocationManagerDelegate {
@@ -226,14 +198,6 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
             
             handler(rootViewController)
         }
-    }
-    
-}
-
-extension AppDelegate: DP3TTracingDelegate {
-    
-    func DP3TTracingStateChanged(_ state: TracingState) {
-        logDp3t("Tracing state changed: \(state)")
     }
     
 }

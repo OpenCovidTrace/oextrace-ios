@@ -11,7 +11,6 @@ def pods
   pod 'Alamofire'
   pod 'AlamofireNetworkActivityIndicator'
   pod 'CryptoSwift'
-  pod 'DP3TSDK'
   pod 'Firebase/Analytics'
   pod 'Firebase/Crashlytics'
   pod 'SwiftLint'

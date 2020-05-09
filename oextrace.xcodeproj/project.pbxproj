@@ -34,15 +34,12 @@
 		FA314C052461ADFF00852AE2 /* UserStatusManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314BDF2461ADFE00852AE2 /* UserStatusManager.swift */; };
 		FA314C062461ADFF00852AE2 /* BtLogsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314BE02461ADFE00852AE2 /* BtLogsManager.swift */; };
 		FA314C072461ADFF00852AE2 /* BtContactsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314BE12461ADFE00852AE2 /* BtContactsManager.swift */; };
-		FA314C082461ADFF00852AE2 /* Dp3tLogsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314BE22461ADFE00852AE2 /* Dp3tLogsManager.swift */; };
 		FA314C092461ADFF00852AE2 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314BE42461ADFF00852AE2 /* RoundButton.swift */; };
 		FA314C0B2461ADFF00852AE2 /* ControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314BE72461ADFF00852AE2 /* ControllerExtension.swift */; };
 		FA314C0F2461ADFF00852AE2 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314BEB2461ADFF00852AE2 /* RootViewController.swift */; };
 		FA314C102461ADFF00852AE2 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314BEC2461ADFF00852AE2 /* MapViewController.swift */; };
 		FA314C172461ADFF00852AE2 /* StatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314BF32461ADFF00852AE2 /* StatusViewController.swift */; };
 		FA314C182461ADFF00852AE2 /* IndicatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314BF42461ADFF00852AE2 /* IndicatorViewController.swift */; };
-		FA314C1B2461AF1200852AE2 /* Dp3tLogsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314C192461AF1200852AE2 /* Dp3tLogsViewController.swift */; };
-		FA314C1C2461AF1200852AE2 /* Dp3tLogsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA314C1A2461AF1200852AE2 /* Dp3tLogsViewController.xib */; };
 		FA314C1F2461AF2300852AE2 /* BtLogsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314C1D2461AF2300852AE2 /* BtLogsViewController.swift */; };
 		FA314C202461AF2300852AE2 /* BtLogsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA314C1E2461AF2300852AE2 /* BtLogsViewController.xib */; };
 		FA314C232461AF3900852AE2 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314C212461AF3900852AE2 /* OnboardingViewController.swift */; };
@@ -99,15 +96,12 @@
 		FA314BDF2461ADFE00852AE2 /* UserStatusManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserStatusManager.swift; sourceTree = "<group>"; };
 		FA314BE02461ADFE00852AE2 /* BtLogsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BtLogsManager.swift; sourceTree = "<group>"; };
 		FA314BE12461ADFE00852AE2 /* BtContactsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BtContactsManager.swift; sourceTree = "<group>"; };
-		FA314BE22461ADFE00852AE2 /* Dp3tLogsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dp3tLogsManager.swift; sourceTree = "<group>"; };
 		FA314BE42461ADFF00852AE2 /* RoundButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		FA314BE72461ADFF00852AE2 /* ControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControllerExtension.swift; sourceTree = "<group>"; };
 		FA314BEB2461ADFF00852AE2 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		FA314BEC2461ADFF00852AE2 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		FA314BF32461ADFF00852AE2 /* StatusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusViewController.swift; sourceTree = "<group>"; };
 		FA314BF42461ADFF00852AE2 /* IndicatorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndicatorViewController.swift; sourceTree = "<group>"; };
-		FA314C192461AF1200852AE2 /* Dp3tLogsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dp3tLogsViewController.swift; sourceTree = "<group>"; };
-		FA314C1A2461AF1200852AE2 /* Dp3tLogsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Dp3tLogsViewController.xib; sourceTree = "<group>"; };
 		FA314C1D2461AF2300852AE2 /* BtLogsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BtLogsViewController.swift; sourceTree = "<group>"; };
 		FA314C1E2461AF2300852AE2 /* BtLogsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BtLogsViewController.xib; sourceTree = "<group>"; };
 		FA314C212461AF3900852AE2 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
@@ -259,7 +253,6 @@
 				FA314BDF2461ADFE00852AE2 /* UserStatusManager.swift */,
 				FA314BE02461ADFE00852AE2 /* BtLogsManager.swift */,
 				FA314BE12461ADFE00852AE2 /* BtContactsManager.swift */,
-				FA314BE22461ADFE00852AE2 /* Dp3tLogsManager.swift */,
 			);
 			path = Persistence;
 			sourceTree = "<group>";
@@ -278,7 +271,6 @@
 			children = (
 				FA314C1D2461AF2300852AE2 /* BtLogsViewController.swift */,
 				FA314BE72461ADFF00852AE2 /* ControllerExtension.swift */,
-				FA314C192461AF1200852AE2 /* Dp3tLogsViewController.swift */,
 				FA314BF42461ADFF00852AE2 /* IndicatorViewController.swift */,
 				FA314BEC2461ADFF00852AE2 /* MapViewController.swift */,
 				FA314C212461AF3900852AE2 /* OnboardingViewController.swift */,
@@ -286,7 +278,6 @@
 				FA314BEB2461ADFF00852AE2 /* RootViewController.swift */,
 				FA314BF32461ADFF00852AE2 /* StatusViewController.swift */,
 				FA314C1E2461AF2300852AE2 /* BtLogsViewController.xib */,
-				FA314C1A2461AF1200852AE2 /* Dp3tLogsViewController.xib */,
 				FA314C222461AF3900852AE2 /* OnboardingViewController.xib */,
 				FA314C262461AF4800852AE2 /* QrLinkViewController.xib */,
 			);
@@ -383,7 +374,6 @@
 				FA0F3801246582B70080B91B /* README.md in Resources */,
 				FA314C2C2461B0BB00852AE2 /* GoogleService-Info.plist in Resources */,
 				FA314BA724619ECA00852AE2 /* Assets.xcassets in Resources */,
-				FA314C1C2461AF1200852AE2 /* Dp3tLogsViewController.xib in Resources */,
 				FA314BA524619EC700852AE2 /* Main.storyboard in Resources */,
 				FA314C2A2461B01F00852AE2 /* Localizable.strings in Resources */,
 				FA314C242461AF3900852AE2 /* OnboardingViewController.xib in Resources */,
@@ -497,7 +487,6 @@
 				FA314C182461ADFF00852AE2 /* IndicatorViewController.swift in Sources */,
 				FA314C062461ADFF00852AE2 /* BtLogsManager.swift in Sources */,
 				FA314BFB2461ADFF00852AE2 /* PeripheralDevice.swift in Sources */,
-				FA314C082461ADFF00852AE2 /* Dp3tLogsManager.swift in Sources */,
 				FA314BF92461ADFF00852AE2 /* BtScanningManager.swift in Sources */,
 				FA314C022461ADFF00852AE2 /* TrackingManager.swift in Sources */,
 				FA314BFC2461ADFF00852AE2 /* DataManager.swift in Sources */,
@@ -508,7 +497,6 @@
 				FA314C042461ADFF00852AE2 /* TracksManager.swift in Sources */,
 				FA314BF62461ADFF00852AE2 /* CryptoUtil.swift in Sources */,
 				FA314C172461ADFF00852AE2 /* StatusViewController.swift in Sources */,
-				FA314C1B2461AF1200852AE2 /* Dp3tLogsViewController.swift in Sources */,
 				FA314C0B2461ADFF00852AE2 /* ControllerExtension.swift in Sources */,
 				FA314C2E2461B26A00852AE2 /* R.generated.swift in Sources */,
 				FA314C102461ADFF00852AE2 /* MapViewController.swift in Sources */,
