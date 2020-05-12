@@ -27,11 +27,11 @@
     <key>NSBluetoothPeripheralUsageDescription</key>
     <string>Bluetooth is used for anonymous automatic exposure tracing.</string>
     <key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-    <string>We use your location to record tracks of your movement. All the data is stored on your device unless you get exposed and want to shared it with others. Allow location usage in background so it will stil work while you switch to other apps or when your device is locked.</string>
+    <string>Location data is used to process only relevant data in your area and to have the capability to record anonymous tracks of your movements and contacts. Location usage in background allows anonymous contact and movement recording while you switch to other apps or when your device is locked.</string>
     <key>NSLocationAlwaysUsageDescription</key>
-    <string>We use your location to record tracks of your movement. All the data is stored on your device unless you get exposed and want to shared it with others. Allow location usage in background so it will stil work while you switch to other apps or when your device is locked.</string>
+    <string>Location data is used to process only relevant data in your area and to have the capability to record anonymous tracks of your movements and contacts. Location usage in background allows anonymous contact and movement recording while you switch to other apps or when your device is locked.</string>
     <key>NSLocationWhenInUseUsageDescription</key>
-    <string>We use your location to record tracks of your movement. All the data is stored on your device unless you get exposed and want to shared it with others.</string>
+    <string>Location data is used to process only relevant data in your area and to have the capability to record anonymous tracks of your movements and contacts.</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>bluetooth-central</string>

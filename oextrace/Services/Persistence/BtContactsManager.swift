@@ -46,7 +46,7 @@ class BtContactsManager {
         var hasExposure = false
         var lastExposedContactCoord: ContactCoord?
         
-        newContacts.forEach { (rollingId, contact) in
+        newContacts.forEach { (_, contact) in
             keysData.keys
                 .filter { $0.day == contact.day }
                 .forEach { key in

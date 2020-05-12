@@ -8,7 +8,7 @@ class StatusViewController: IndicatorViewController {
     
     @IBAction func statusChange(_ sender: Any) {
         if UserStatusManager.sick() {
-            showInfo(R.string.localizable.new_statuses_disclaimer())
+            showInfo(R.string.localizable.whats_next_text())
         } else {
             confirm(R.string.localizable.report_exposure_confirmation()) {
                 self.updateUserStatus(UserStatusManager.exposed)
