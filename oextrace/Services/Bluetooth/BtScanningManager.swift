@@ -127,9 +127,9 @@ extension BtScanningManager: CBPeripheralDelegate {
                 let encounter = BtEncounter(rssi: rssi, meta: meta)
                 BtContactsManager.addContact(rollingId, day, encounter)
                 
-                log("Recorded a contact with \(rollingId) rssi \(rssi)")
+                log("Recorded a contact with \(peripheral.identifier.uuidString) RSSI \(rssi)")
             } else {
-                log("Failed to record contact: no rssi data")
+                log("Failed to record contact: no RSSI data")
             }
         }
 
