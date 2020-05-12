@@ -49,6 +49,47 @@
 		FA314C2A2461B01F00852AE2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FA314C292461B01F00852AE2 /* Localizable.strings */; };
 		FA314C2C2461B0BB00852AE2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FA314C2B2461B0BB00852AE2 /* GoogleService-Info.plist */; };
 		FA314C2E2461B26A00852AE2 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314C2D2461B26A00852AE2 /* R.generated.swift */; };
+		FAB0C0C2246B165A001F7D52 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314BCF2461ADFE00852AE2 /* LocationManager.swift */; };
+		FAB0C0C3246B165A001F7D52 /* LocationIndexManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314BD92461ADFE00852AE2 /* LocationIndexManager.swift */; };
+		FAB0C0C4246B165A001F7D52 /* BtServiceDefinition.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314BD32461ADFE00852AE2 /* BtServiceDefinition.swift */; };
+		FAB0C0C5246B165A001F7D52 /* OnboardingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314BD72461ADFE00852AE2 /* OnboardingManager.swift */; };
+		FAB0C0C6246B165A001F7D52 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314BEB2461ADFF00852AE2 /* RootViewController.swift */; };
+		FAB0C0C7246B165A001F7D52 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314BE42461ADFF00852AE2 /* RoundButton.swift */; };
+		FAB0C0C8246B165A001F7D52 /* NetworkUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314BCB2461ADFE00852AE2 /* NetworkUtil.swift */; };
+		FAB0C0C9246B165A001F7D52 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314C212461AF3900852AE2 /* OnboardingViewController.swift */; };
+		FAB0C0CA246B165A001F7D52 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314B9D24619EC700852AE2 /* AppDelegate.swift */; };
+		FAB0C0CB246B165A001F7D52 /* BtAdvertisingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314BD12461ADFE00852AE2 /* BtAdvertisingManager.swift */; };
+		FAB0C0CC246B165A001F7D52 /* BtLogsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314C1D2461AF2300852AE2 /* BtLogsViewController.swift */; };
+		FAB0C0CD246B165A001F7D52 /* IndicatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314BF42461ADFF00852AE2 /* IndicatorViewController.swift */; };
+		FAB0C0CE246B165A001F7D52 /* BtLogsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314BE02461ADFE00852AE2 /* BtLogsManager.swift */; };
+		FAB0C0CF246B165A001F7D52 /* PeripheralDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314BD42461ADFE00852AE2 /* PeripheralDevice.swift */; };
+		FAB0C0D0246B165A001F7D52 /* BtScanningManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314BD22461ADFE00852AE2 /* BtScanningManager.swift */; };
+		FAB0C0D1246B165A001F7D52 /* TrackingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314BDC2461ADFE00852AE2 /* TrackingManager.swift */; };
+		FAB0C0D2246B165A001F7D52 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314BD62461ADFE00852AE2 /* DataManager.swift */; };
+		FAB0C0D3246B165A001F7D52 /* EncryptionKeysManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314BDB2461ADFE00852AE2 /* EncryptionKeysManager.swift */; };
+		FAB0C0D4246B165A001F7D52 /* QrLinkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314C252461AF4800852AE2 /* QrLinkViewController.swift */; };
+		FAB0C0D5246B165A001F7D52 /* UserSettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314BDF2461ADFE00852AE2 /* UserSettingsManager.swift */; };
+		FAB0C0D6246B165A001F7D52 /* LocationBordersManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314BDD2461ADFE00852AE2 /* LocationBordersManager.swift */; };
+		FAB0C0D7246B165A001F7D52 /* TracksManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314BDE2461ADFE00852AE2 /* TracksManager.swift */; };
+		FAB0C0D8246B165A001F7D52 /* CryptoUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314BCC2461ADFE00852AE2 /* CryptoUtil.swift */; };
+		FAB0C0D9246B165A001F7D52 /* StatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314BF32461ADFF00852AE2 /* StatusViewController.swift */; };
+		FAB0C0DA246B165A001F7D52 /* ControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314BE72461ADFF00852AE2 /* ControllerExtension.swift */; };
+		FAB0C0DB246B165A001F7D52 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314C2D2461B26A00852AE2 /* R.generated.swift */; };
+		FAB0C0DC246B165A001F7D52 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314BEC2461ADFF00852AE2 /* MapViewController.swift */; };
+		FAB0C0DD246B165A001F7D52 /* QrContactsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314BD82461ADFE00852AE2 /* QrContactsManager.swift */; };
+		FAB0C0DE246B165A001F7D52 /* BtContactsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314BE12461ADFE00852AE2 /* BtContactsManager.swift */; };
+		FAB0C0DF246B165A001F7D52 /* KeysManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314BDA2461ADFE00852AE2 /* KeysManager.swift */; };
+		FAB0C0E1246B165A001F7D52 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA314BC02461A94100852AE2 /* MapKit.framework */; };
+		FAB0C0E2246B165A001F7D52 /* Pods_oextrace.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D4545DC893EFE0201145213 /* Pods_oextrace.framework */; };
+		FAB0C0E4246B165A001F7D52 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA314BA824619ECA00852AE2 /* LaunchScreen.storyboard */; };
+		FAB0C0E5246B165A001F7D52 /* BtLogsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA314C1E2461AF2300852AE2 /* BtLogsViewController.xib */; };
+		FAB0C0E6246B165A001F7D52 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = FA0F37FF246582B60080B91B /* README.md */; };
+		FAB0C0E8246B165A001F7D52 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA314BA624619ECA00852AE2 /* Assets.xcassets */; };
+		FAB0C0E9246B165A001F7D52 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA314BA324619EC700852AE2 /* Main.storyboard */; };
+		FAB0C0EA246B165A001F7D52 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FA314C292461B01F00852AE2 /* Localizable.strings */; };
+		FAB0C0EB246B165A001F7D52 /* OnboardingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA314C222461AF3900852AE2 /* OnboardingViewController.xib */; };
+		FAB0C0EC246B165A001F7D52 /* QrLinkViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA314C262461AF4800852AE2 /* QrLinkViewController.xib */; };
+		FAB0C0F8246B1877001F7D52 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FAB0C0F7246B1877001F7D52 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,7 +116,7 @@
 		FA314BB024619ECA00852AE2 /* oextraceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = oextraceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA314BB424619ECA00852AE2 /* oextraceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = oextraceTests.swift; sourceTree = "<group>"; };
 		FA314BB624619ECA00852AE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FA314BBF2461A94000852AE2 /* OExTrace.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OExTrace.entitlements; sourceTree = "<group>"; };
+		FA314BBF2461A94000852AE2 /* OExTrace DEV.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "OExTrace DEV.entitlements"; sourceTree = "<group>"; };
 		FA314BC02461A94100852AE2 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		FA314BCB2461ADFE00852AE2 /* NetworkUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkUtil.swift; sourceTree = "<group>"; };
 		FA314BCC2461ADFE00852AE2 /* CryptoUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CryptoUtil.swift; sourceTree = "<group>"; };
@@ -111,6 +152,9 @@
 		FA314C292461B01F00852AE2 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		FA314C2B2461B0BB00852AE2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FA314C2D2461B26A00852AE2 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
+		FAB0C0F2246B165A001F7D52 /* OExTrace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OExTrace.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAB0C0F4246B17FB001F7D52 /* OExTrace PROD.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = "OExTrace PROD.entitlements"; sourceTree = "<group>"; };
+		FAB0C0F7246B1877001F7D52 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +171,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAB0C0E0246B165A001F7D52 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAB0C0E1246B165A001F7D52 /* MapKit.framework in Frameworks */,
+				FAB0C0E2246B165A001F7D52 /* Pods_oextrace.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -169,6 +222,7 @@
 			children = (
 				FA314B9A24619EC700852AE2 /* OExTrace DEV.app */,
 				FA314BB024619ECA00852AE2 /* oextraceTests.xctest */,
+				FAB0C0F2246B165A001F7D52 /* OExTrace.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -176,8 +230,10 @@
 		FA314B9C24619EC700852AE2 /* oextrace */ = {
 			isa = PBXGroup;
 			children = (
-				FA314BBF2461A94000852AE2 /* OExTrace.entitlements */,
-				FA314C2B2461B0BB00852AE2 /* GoogleService-Info.plist */,
+				FAB0C0F5246B183E001F7D52 /* DEV */,
+				FAB0C0F6246B1844001F7D52 /* PROD */,
+				FAB0C0F4246B17FB001F7D52 /* OExTrace PROD.entitlements */,
+				FA314BBF2461A94000852AE2 /* OExTrace DEV.entitlements */,
 				FA314BAB24619ECA00852AE2 /* Info.plist */,
 				FA314C292461B01F00852AE2 /* Localizable.strings */,
 				FA314B9D24619EC700852AE2 /* AppDelegate.swift */,
@@ -284,12 +340,28 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
+		FAB0C0F5246B183E001F7D52 /* DEV */ = {
+			isa = PBXGroup;
+			children = (
+				FA314C2B2461B0BB00852AE2 /* GoogleService-Info.plist */,
+			);
+			path = DEV;
+			sourceTree = "<group>";
+		};
+		FAB0C0F6246B1844001F7D52 /* PROD */ = {
+			isa = PBXGroup;
+			children = (
+				FAB0C0F7246B1877001F7D52 /* GoogleService-Info.plist */,
+			);
+			path = PROD;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		FA314B9924619EC700852AE2 /* oextrace */ = {
+		FA314B9924619EC700852AE2 /* oextrace DEV */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FA314BB924619ECA00852AE2 /* Build configuration list for PBXNativeTarget "oextrace" */;
+			buildConfigurationList = FA314BB924619ECA00852AE2 /* Build configuration list for PBXNativeTarget "oextrace DEV" */;
 			buildPhases = (
 				6B1CF743B1555B67332F6374 /* [CP] Check Pods Manifest.lock */,
 				FA314BC22461ACE900852AE2 /* ShellScript */,
@@ -303,7 +375,7 @@
 			);
 			dependencies = (
 			);
-			name = oextrace;
+			name = "oextrace DEV";
 			productName = oextrace;
 			productReference = FA314B9A24619EC700852AE2 /* OExTrace DEV.app */;
 			productType = "com.apple.product-type.application";
@@ -325,6 +397,27 @@
 			productName = oextraceTests;
 			productReference = FA314BB024619ECA00852AE2 /* oextraceTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FAB0C0BE246B165A001F7D52 /* oextrace PROD */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FAB0C0EF246B165A001F7D52 /* Build configuration list for PBXNativeTarget "oextrace PROD" */;
+			buildPhases = (
+				FAB0C0BF246B165A001F7D52 /* [CP] Check Pods Manifest.lock */,
+				FAB0C0C0246B165A001F7D52 /* ShellScript */,
+				FAB0C0C1246B165A001F7D52 /* Sources */,
+				FAB0C0E0246B165A001F7D52 /* Frameworks */,
+				FAB0C0E3246B165A001F7D52 /* Resources */,
+				FAB0C0ED246B165A001F7D52 /* [CP] Embed Pods Frameworks */,
+				FAB0C0EE246B165A001F7D52 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "oextrace PROD";
+			productName = oextrace;
+			productReference = FAB0C0F2246B165A001F7D52 /* OExTrace.app */;
+			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
@@ -358,7 +451,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				FA314B9924619EC700852AE2 /* oextrace */,
+				FA314B9924619EC700852AE2 /* oextrace DEV */,
+				FAB0C0BE246B165A001F7D52 /* oextrace PROD */,
 				FA314BAF24619ECA00852AE2 /* oextraceTests */,
 			);
 		};
@@ -385,6 +479,22 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAB0C0E3246B165A001F7D52 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAB0C0E4246B165A001F7D52 /* LaunchScreen.storyboard in Resources */,
+				FAB0C0E5246B165A001F7D52 /* BtLogsViewController.xib in Resources */,
+				FAB0C0E6246B165A001F7D52 /* README.md in Resources */,
+				FAB0C0E8246B165A001F7D52 /* Assets.xcassets in Resources */,
+				FAB0C0E9246B165A001F7D52 /* Main.storyboard in Resources */,
+				FAB0C0EA246B165A001F7D52 /* Localizable.strings in Resources */,
+				FAB0C0F8246B1877001F7D52 /* GoogleService-Info.plist in Resources */,
+				FAB0C0EB246B165A001F7D52 /* OnboardingViewController.xib in Resources */,
+				FAB0C0EC246B165A001F7D52 /* QrLinkViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -466,6 +576,81 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
 		};
+		FAB0C0BF246B165A001F7D52 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-oextrace-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FAB0C0C0246B165A001F7D52 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$TEMP_DIR/rswift-lastrun",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\n";
+		};
+		FAB0C0ED246B165A001F7D52 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-oextrace/Pods-oextrace-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-oextrace/Pods-oextrace-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-oextrace/Pods-oextrace-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FAB0C0EE246B165A001F7D52 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -514,12 +699,49 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FAB0C0C1246B165A001F7D52 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAB0C0C2246B165A001F7D52 /* LocationManager.swift in Sources */,
+				FAB0C0C3246B165A001F7D52 /* LocationIndexManager.swift in Sources */,
+				FAB0C0C4246B165A001F7D52 /* BtServiceDefinition.swift in Sources */,
+				FAB0C0C5246B165A001F7D52 /* OnboardingManager.swift in Sources */,
+				FAB0C0C6246B165A001F7D52 /* RootViewController.swift in Sources */,
+				FAB0C0C7246B165A001F7D52 /* RoundButton.swift in Sources */,
+				FAB0C0C8246B165A001F7D52 /* NetworkUtil.swift in Sources */,
+				FAB0C0C9246B165A001F7D52 /* OnboardingViewController.swift in Sources */,
+				FAB0C0CA246B165A001F7D52 /* AppDelegate.swift in Sources */,
+				FAB0C0CB246B165A001F7D52 /* BtAdvertisingManager.swift in Sources */,
+				FAB0C0CC246B165A001F7D52 /* BtLogsViewController.swift in Sources */,
+				FAB0C0CD246B165A001F7D52 /* IndicatorViewController.swift in Sources */,
+				FAB0C0CE246B165A001F7D52 /* BtLogsManager.swift in Sources */,
+				FAB0C0CF246B165A001F7D52 /* PeripheralDevice.swift in Sources */,
+				FAB0C0D0246B165A001F7D52 /* BtScanningManager.swift in Sources */,
+				FAB0C0D1246B165A001F7D52 /* TrackingManager.swift in Sources */,
+				FAB0C0D2246B165A001F7D52 /* DataManager.swift in Sources */,
+				FAB0C0D3246B165A001F7D52 /* EncryptionKeysManager.swift in Sources */,
+				FAB0C0D4246B165A001F7D52 /* QrLinkViewController.swift in Sources */,
+				FAB0C0D5246B165A001F7D52 /* UserSettingsManager.swift in Sources */,
+				FAB0C0D6246B165A001F7D52 /* LocationBordersManager.swift in Sources */,
+				FAB0C0D7246B165A001F7D52 /* TracksManager.swift in Sources */,
+				FAB0C0D8246B165A001F7D52 /* CryptoUtil.swift in Sources */,
+				FAB0C0D9246B165A001F7D52 /* StatusViewController.swift in Sources */,
+				FAB0C0DA246B165A001F7D52 /* ControllerExtension.swift in Sources */,
+				FAB0C0DB246B165A001F7D52 /* R.generated.swift in Sources */,
+				FAB0C0DC246B165A001F7D52 /* MapViewController.swift in Sources */,
+				FAB0C0DD246B165A001F7D52 /* QrContactsManager.swift in Sources */,
+				FAB0C0DE246B165A001F7D52 /* BtContactsManager.swift in Sources */,
+				FAB0C0DF246B165A001F7D52 /* KeysManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
 		FA314BB224619ECA00852AE2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = FA314B9924619EC700852AE2 /* oextrace */;
+			target = FA314B9924619EC700852AE2 /* oextrace DEV */;
 			targetProxy = FA314BB124619ECA00852AE2 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -663,7 +885,7 @@
 			baseConfigurationReference = 40722C0D5DC4FD64E6438527 /* Pods-oextrace.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = oextrace/OExTrace.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "oextrace/OExTrace DEV.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = S5ENNERNQZ;
@@ -674,6 +896,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 0.0.1;
+				OTHER_SWIFT_FLAGS = "$(inherited) -DDEVELOPMENT";
 				PRODUCT_BUNDLE_IDENTIFIER = org.openexposuretrace.oextrace.dev;
 				PRODUCT_NAME = "OExTrace DEV";
 				SWIFT_VERSION = 5.0;
@@ -686,7 +909,7 @@
 			baseConfigurationReference = 0E8C424996CDB9ADB6ED7379 /* Pods-oextrace.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = oextrace/OExTrace.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "oextrace/OExTrace DEV.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = S5ENNERNQZ;
@@ -697,6 +920,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 0.0.1;
+				OTHER_SWIFT_FLAGS = "$(inherited) -DDEVELOPMENT";
 				PRODUCT_BUNDLE_IDENTIFIER = org.openexposuretrace.oextrace.dev;
 				PRODUCT_NAME = "OExTrace DEV";
 				SWIFT_VERSION = 5.0;
@@ -748,6 +972,52 @@
 			};
 			name = Release;
 		};
+		FAB0C0F0246B165A001F7D52 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 40722C0D5DC4FD64E6438527 /* Pods-oextrace.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "oextrace/OExTrace PROD.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = S5ENNERNQZ;
+				INFOPLIST_FILE = oextrace/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = org.openexposuretrace.oextrace;
+				PRODUCT_NAME = OExTrace;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FAB0C0F1246B165A001F7D52 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0E8C424996CDB9ADB6ED7379 /* Pods-oextrace.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "oextrace/OExTrace PROD.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = S5ENNERNQZ;
+				INFOPLIST_FILE = oextrace/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = org.openexposuretrace.oextrace;
+				PRODUCT_NAME = OExTrace;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -760,7 +1030,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FA314BB924619ECA00852AE2 /* Build configuration list for PBXNativeTarget "oextrace" */ = {
+		FA314BB924619ECA00852AE2 /* Build configuration list for PBXNativeTarget "oextrace DEV" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FA314BBA24619ECA00852AE2 /* Debug */,
@@ -774,6 +1044,15 @@
 			buildConfigurations = (
 				FA314BBD24619ECA00852AE2 /* Debug */,
 				FA314BBE24619ECA00852AE2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FAB0C0EF246B165A001F7D52 /* Build configuration list for PBXNativeTarget "oextrace PROD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAB0C0F0246B165A001F7D52 /* Debug */,
+				FAB0C0F1246B165A001F7D52 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
