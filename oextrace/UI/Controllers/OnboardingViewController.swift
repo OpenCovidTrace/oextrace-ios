@@ -15,6 +15,8 @@ class OnboardingViewController: UIViewController {
     @IBAction func actionTap(_ sender: Any) {
         switch stage {
         case OnboardingStage.location:
+            UserSettingsManager.recordTrack = true
+            
             LocationManager.requestAuthorization()
             
             goNext(OnboardingStage.bluetooth)

@@ -17,21 +17,21 @@
 	<key>CFBundleShortVersionString</key>
 	<string>$(MARKETING_VERSION)</string>
 	<key>CFBundleVersion</key>
-	<string>1</string>
+	<string>$(CURRENT_PROJECT_VERSION)</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>MKDirectionsApplicationSupportedModes</key>
 	<array/>
-    <key>NSBluetoothAlwaysUsageDescription</key>
-    <string>Bluetooth is used for anonymous automatic exposure tracing.</string>
-    <key>NSBluetoothPeripheralUsageDescription</key>
-    <string>Bluetooth is used for anonymous automatic exposure tracing.</string>
-    <key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-    <string>Location data is used to process only relevant data in your area and to have the capability to record anonymous tracks of your movements and contacts. Location usage in background allows anonymous contact and movement recording while you switch to other apps or when your device is locked.</string>
-    <key>NSLocationAlwaysUsageDescription</key>
-    <string>Location data is used to process only relevant data in your area and to have the capability to record anonymous tracks of your movements and contacts. Location usage in background allows anonymous contact and movement recording while you switch to other apps or when your device is locked.</string>
-    <key>NSLocationWhenInUseUsageDescription</key>
-    <string>Location data is used to process only relevant data in your area and to have the capability to record anonymous tracks of your movements and contacts.</string>
+	<key>NSBluetoothAlwaysUsageDescription</key>
+	<string>Bluetooth is used for anonymous automatic exposure tracing.</string>
+	<key>NSBluetoothPeripheralUsageDescription</key>
+	<string>Bluetooth is used for anonymous automatic exposure tracing.</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>Location data is used to process only relevant data in your area and to have the capability to record anonymous tracks of your movements and contacts. Location usage in background allows anonymous contact and movement recording while you switch to other apps or when your device is locked.</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Location data is used to process only relevant data in your area and to have the capability to record anonymous tracks of your movements and contacts. Location usage in background allows anonymous contact and movement recording while you switch to other apps or when your device is locked.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Location data is used to process only relevant data in your area and to have the capability to record anonymous tracks of your movements and contacts.</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>bluetooth-central</string>

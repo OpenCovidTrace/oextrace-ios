@@ -67,16 +67,6 @@ class KeysManager {
         }
     }
     
-    static var discloseMetaData: Bool {
-        get {
-            UserDefaults.standard.bool(forKey: kDiscloseMetaData)
-        }
-        
-        set {
-            UserDefaults.standard.set(newValue, forKey: kDiscloseMetaData)
-        }
-    }
-    
     static func uploadNewKeys(includeToday: Bool = false) {
         let oldLastUploadDay = lastUpdloadDay
         
@@ -99,7 +89,7 @@ class KeysManager {
                 let metaKey = metaKeys[dayNumber] {
                 border.secure()
                 
-                let meta = discloseMetaData ? metaKey.base64EncodedString() : nil
+                let meta = UserSettingsManager.discloseMetaData ? metaKey.base64EncodedString() : nil
                 
                 let key = Key(value: dailyKey.base64EncodedString(),
                               meta: meta,

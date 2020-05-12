@@ -83,6 +83,10 @@ class TracksManager {
             }
         }
         
+        if tracksByDay.isEmpty {
+            return
+        }
+        
         let tracksData = TracksData(tracks: [Track](tracksByDay.values))
         
         AF.request(NetworkUtil.storageEndpoint("tracks"),

@@ -59,7 +59,7 @@ class RootViewController: UITabBarController {
                 self.loadDiagnosticKeys(location)
             }
             
-            if UserStatusManager.sick() {
+            if UserSettingsManager.sick() {
                 KeysManager.uploadNewKeys()
             }
             

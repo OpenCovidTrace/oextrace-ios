@@ -32,8 +32,50 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Hn-R5-qRA">
+                                <rect key="frame" x="32" y="120" width="350" height="26.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                <color key="textColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GoB-6a-kOI">
+                                <rect key="frame" x="32" y="162.5" width="51" height="31"/>
+                                <connections>
+                                    <action selector="recordTrackSwitched:" destination="Ghp-dC-3Qn" eventType="valueChanged" id="yws-Ya-gLn"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Record my track" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ABf-zF-BXG">
+                                <rect key="frame" x="89" y="167.5" width="293" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="46u-Mw-LG1">
+                                <rect key="frame" x="32" y="209.5" width="51" height="31"/>
+                                <connections>
+                                    <action selector="shareTrackSwitched:" destination="Ghp-dC-3Qn" eventType="valueChanged" id="xJZ-Qe-X34"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Share my track" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5We-OF-4MX">
+                                <rect key="frame" x="89" y="214.5" width="293" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="u9f-bR-YdG">
+                                <rect key="frame" x="32" y="256.5" width="51" height="31"/>
+                                <connections>
+                                    <action selector="shareMetaDataSwitched:" destination="Ghp-dC-3Qn" eventType="valueChanged" id="bVc-AF-hFU"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Share contacts time &amp; location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="prE-HL-ZkY">
+                                <rect key="frame" x="89" y="261.5" width="293" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zd8-EY-FkC" customClass="RoundButton" customModule="OExTrace_DEV" customModuleProvider="target">
-                                <rect key="frame" x="32" y="426" width="350" height="44"/>
+                                <rect key="frame" x="32" y="410" width="350" height="44"/>
                                 <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="6ms-r6-urX"/>
@@ -46,7 +88,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CURRENT STATUS" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oLe-m7-4Aw">
-                                <rect key="frame" x="32" y="367.5" width="350" height="26.5"/>
+                                <rect key="frame" x="32" y="351.5" width="350" height="26.5"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                 <color key="textColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -54,17 +96,38 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="u9f-bR-YdG" firstAttribute="leading" secondItem="GoB-6a-kOI" secondAttribute="leading" id="34V-4n-Zof"/>
+                            <constraint firstItem="mgh-iC-Zzn" firstAttribute="trailing" secondItem="ABf-zF-BXG" secondAttribute="trailing" constant="32" id="85b-KP-Msc"/>
+                            <constraint firstItem="mgh-iC-Zzn" firstAttribute="trailing" secondItem="prE-HL-ZkY" secondAttribute="trailing" constant="32" id="9dg-Ow-1HC"/>
+                            <constraint firstItem="ABf-zF-BXG" firstAttribute="centerY" secondItem="GoB-6a-kOI" secondAttribute="centerY" id="9sK-WD-B3E"/>
+                            <constraint firstItem="oLe-m7-4Aw" firstAttribute="top" secondItem="u9f-bR-YdG" secondAttribute="bottom" constant="64" id="AhO-0v-uoO"/>
+                            <constraint firstItem="mgh-iC-Zzn" firstAttribute="trailing" secondItem="1Hn-R5-qRA" secondAttribute="trailing" constant="32" id="Atf-BV-OQa"/>
+                            <constraint firstItem="46u-Mw-LG1" firstAttribute="top" secondItem="GoB-6a-kOI" secondAttribute="bottom" constant="16" id="HXk-NX-uKr"/>
+                            <constraint firstItem="ABf-zF-BXG" firstAttribute="leading" secondItem="GoB-6a-kOI" secondAttribute="trailing" constant="8" id="JCW-BP-o2H"/>
+                            <constraint firstItem="1Hn-R5-qRA" firstAttribute="top" secondItem="mgh-iC-Zzn" secondAttribute="top" constant="32" id="K9I-4v-2XF"/>
                             <constraint firstItem="Zd8-EY-FkC" firstAttribute="leading" secondItem="mgh-iC-Zzn" secondAttribute="leading" constant="32" id="Nte-ly-zfO"/>
                             <constraint firstItem="mgh-iC-Zzn" firstAttribute="trailing" secondItem="Zd8-EY-FkC" secondAttribute="trailing" constant="32" id="O7i-5X-WuS"/>
+                            <constraint firstItem="46u-Mw-LG1" firstAttribute="leading" secondItem="GoB-6a-kOI" secondAttribute="leading" id="OJR-Hd-1CX"/>
+                            <constraint firstItem="1Hn-R5-qRA" firstAttribute="leading" secondItem="mgh-iC-Zzn" secondAttribute="leading" constant="32" id="RGM-1g-bmB"/>
+                            <constraint firstItem="5We-OF-4MX" firstAttribute="centerY" secondItem="46u-Mw-LG1" secondAttribute="centerY" id="Xxb-TP-ck2"/>
+                            <constraint firstItem="mgh-iC-Zzn" firstAttribute="trailing" secondItem="5We-OF-4MX" secondAttribute="trailing" constant="32" id="Z0h-vN-zxU"/>
+                            <constraint firstItem="GoB-6a-kOI" firstAttribute="leading" secondItem="mgh-iC-Zzn" secondAttribute="leading" constant="32" id="ZrW-4H-4Gk"/>
                             <constraint firstItem="mgh-iC-Zzn" firstAttribute="trailing" secondItem="oLe-m7-4Aw" secondAttribute="trailing" constant="32" id="cQe-2C-mxz"/>
-                            <constraint firstItem="Zd8-EY-FkC" firstAttribute="centerY" secondItem="rjl-BH-rqX" secondAttribute="centerY" id="jeG-AO-GFc"/>
+                            <constraint firstItem="GoB-6a-kOI" firstAttribute="top" secondItem="1Hn-R5-qRA" secondAttribute="bottom" constant="16" id="h6n-D4-h4U"/>
                             <constraint firstItem="oLe-m7-4Aw" firstAttribute="leading" secondItem="mgh-iC-Zzn" secondAttribute="leading" constant="32" id="lbf-7g-sZD"/>
+                            <constraint firstItem="prE-HL-ZkY" firstAttribute="leading" secondItem="u9f-bR-YdG" secondAttribute="trailing" constant="8" id="mY7-BG-9wu"/>
+                            <constraint firstItem="5We-OF-4MX" firstAttribute="leading" secondItem="46u-Mw-LG1" secondAttribute="trailing" constant="8" id="vgt-m9-W9s"/>
+                            <constraint firstItem="u9f-bR-YdG" firstAttribute="top" secondItem="46u-Mw-LG1" secondAttribute="bottom" constant="16" id="yA4-BF-3ca"/>
+                            <constraint firstItem="prE-HL-ZkY" firstAttribute="centerY" secondItem="u9f-bR-YdG" secondAttribute="centerY" id="yhj-Rw-aHj"/>
                             <constraint firstItem="Zd8-EY-FkC" firstAttribute="top" secondItem="oLe-m7-4Aw" secondAttribute="bottom" constant="32" id="zBK-Qz-wav"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mgh-iC-Zzn"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="My status" image="tab_status" id="iCN-pY-gUQ"/>
                     <connections>
+                        <outlet property="recordTrackSwitch" destination="GoB-6a-kOI" id="frz-HO-aWE"/>
+                        <outlet property="shareMetaDataSwitch" destination="u9f-bR-YdG" id="AQu-j2-vyv"/>
+                        <outlet property="shareTrackSwitch" destination="46u-Mw-LG1" id="79y-6B-Nbf"/>
                         <outlet property="statusButton" destination="Zd8-EY-FkC" id="AhY-Aw-DsQ"/>
                         <outlet property="statusLabel" destination="oLe-m7-4Aw" id="7Ad-hX-j30"/>
                     </connections>

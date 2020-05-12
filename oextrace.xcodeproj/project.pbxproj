@@ -31,7 +31,7 @@
 		FA314C022461ADFF00852AE2 /* TrackingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314BDC2461ADFE00852AE2 /* TrackingManager.swift */; };
 		FA314C032461ADFF00852AE2 /* LocationBordersManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314BDD2461ADFE00852AE2 /* LocationBordersManager.swift */; };
 		FA314C042461ADFF00852AE2 /* TracksManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314BDE2461ADFE00852AE2 /* TracksManager.swift */; };
-		FA314C052461ADFF00852AE2 /* UserStatusManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314BDF2461ADFE00852AE2 /* UserStatusManager.swift */; };
+		FA314C052461ADFF00852AE2 /* UserSettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314BDF2461ADFE00852AE2 /* UserSettingsManager.swift */; };
 		FA314C062461ADFF00852AE2 /* BtLogsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314BE02461ADFE00852AE2 /* BtLogsManager.swift */; };
 		FA314C072461ADFF00852AE2 /* BtContactsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314BE12461ADFE00852AE2 /* BtContactsManager.swift */; };
 		FA314C092461ADFF00852AE2 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314BE42461ADFF00852AE2 /* RoundButton.swift */; };
@@ -93,7 +93,7 @@
 		FA314BDC2461ADFE00852AE2 /* TrackingManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackingManager.swift; sourceTree = "<group>"; };
 		FA314BDD2461ADFE00852AE2 /* LocationBordersManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationBordersManager.swift; sourceTree = "<group>"; };
 		FA314BDE2461ADFE00852AE2 /* TracksManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TracksManager.swift; sourceTree = "<group>"; };
-		FA314BDF2461ADFE00852AE2 /* UserStatusManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserStatusManager.swift; sourceTree = "<group>"; };
+		FA314BDF2461ADFE00852AE2 /* UserSettingsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSettingsManager.swift; sourceTree = "<group>"; };
 		FA314BE02461ADFE00852AE2 /* BtLogsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BtLogsManager.swift; sourceTree = "<group>"; };
 		FA314BE12461ADFE00852AE2 /* BtContactsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BtContactsManager.swift; sourceTree = "<group>"; };
 		FA314BE42461ADFF00852AE2 /* RoundButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
@@ -250,7 +250,7 @@
 				FA314BDC2461ADFE00852AE2 /* TrackingManager.swift */,
 				FA314BDD2461ADFE00852AE2 /* LocationBordersManager.swift */,
 				FA314BDE2461ADFE00852AE2 /* TracksManager.swift */,
-				FA314BDF2461ADFE00852AE2 /* UserStatusManager.swift */,
+				FA314BDF2461ADFE00852AE2 /* UserSettingsManager.swift */,
 				FA314BE02461ADFE00852AE2 /* BtLogsManager.swift */,
 				FA314BE12461ADFE00852AE2 /* BtContactsManager.swift */,
 			);
@@ -492,7 +492,7 @@
 				FA314BFC2461ADFF00852AE2 /* DataManager.swift in Sources */,
 				FA314C012461ADFF00852AE2 /* EncryptionKeysManager.swift in Sources */,
 				FA314C272461AF4800852AE2 /* QrLinkViewController.swift in Sources */,
-				FA314C052461ADFF00852AE2 /* UserStatusManager.swift in Sources */,
+				FA314C052461ADFF00852AE2 /* UserSettingsManager.swift in Sources */,
 				FA314C032461ADFF00852AE2 /* LocationBordersManager.swift in Sources */,
 				FA314C042461ADFF00852AE2 /* TracksManager.swift in Sources */,
 				FA314BF62461ADFF00852AE2 /* CryptoUtil.swift in Sources */,
@@ -665,6 +665,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = oextrace/OExTrace.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = S5ENNERNQZ;
 				INFOPLIST_FILE = oextrace/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -687,6 +688,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = oextrace/OExTrace.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = S5ENNERNQZ;
 				INFOPLIST_FILE = oextrace/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;

@@ -38,7 +38,7 @@ extension UIViewController {
      Dialogs
      */
     
-    func confirm(_ message: String, _ handler: @escaping () -> Swift.Void) {
+    func confirm(_ message: String, handler: @escaping () -> Void) {
         let alert = UIAlertController(title: R.string.localizable.please_confirm(),
                                       message: message,
                                       preferredStyle: .alert)
@@ -48,6 +48,20 @@ extension UIViewController {
                                       handler: { _ in handler() }))
         
         alert.addAction(UIAlertAction(title: R.string.localizable.cancel_button(), style: .cancel))
+        
+        present(alert, animated: true, completion: nil)
+    }
+    
+    func confirm(_ message: String, handler: @escaping () -> Void, cancelHandler: @escaping () -> Void) {
+        let alert = UIAlertController(title: R.string.localizable.please_confirm(),
+                                      message: message,
+                                      preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: R.string.localizable.yes_button(),
+                                      style: .default,
+                                      handler: { _ in handler() }))
+        
+        alert.addAction(UIAlertAction(title: R.string.localizable.cancel_button(), style: .cancel, handler: { _ in cancelHandler() }))
         
         present(alert, animated: true, completion: nil)
     }
