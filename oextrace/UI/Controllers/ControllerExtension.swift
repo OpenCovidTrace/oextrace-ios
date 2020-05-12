@@ -61,7 +61,11 @@ extension UIViewController {
                                       style: .default,
                                       handler: { _ in handler() }))
         
-        alert.addAction(UIAlertAction(title: R.string.localizable.cancel_button(), style: .cancel, handler: { _ in cancelHandler() }))
+        alert.addAction(
+            UIAlertAction(title: R.string.localizable.cancel_button(),
+                          style: .cancel,
+                          handler: { _ in cancelHandler() })
+        )
         
         present(alert, animated: true, completion: nil)
     }
