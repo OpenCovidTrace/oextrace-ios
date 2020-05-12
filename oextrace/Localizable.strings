@@ -1,7 +1,7 @@
 "MAKE_CONTACT" = "Contact has been added to your contact history.";
 
 /*  Onboarding screen title */
-"location_data" = "Location Data (anonymous)";
+"location_data" = "Location Data";
 
 /* Location data onboarding screen description */
 "location_data_description" = "Location data (not your exact location but rather a relevant area) is needed in order to make sure only relevant exposure data is downloaded to your app from the server in case needed.\n\nYou can optionally track your movement on the map, and it will show areas to avoid due to virus exposure.\n\nIn case you report exposed, you can share your anonymous location data. This means that users that have been in contact with you at any point in time will know the relevant time and place of contact, and can take precautions accordingly.";
