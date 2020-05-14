@@ -5,6 +5,7 @@ class CryptoUtil {
     
     static let keyLength = 16
     
+    private static let intBytes = 4
     private static let coordPrecision = 1e7
     
     private init() {}
@@ -180,9 +181,14 @@ class CryptoUtil {
     private static func bytesToInt32(_ bytes: [UInt8]) -> Int32 {
         var value: Int32 = 0
         
-        for byte in bytes {
+        var ind = 0
+        while ind < intBytes {
+            let byte = bytes[intBytes - ind - 1]
+            
             value = value << 8
             value = value | Int32(byte)
+            
+            ind += 1
         }
         
         return value
