@@ -151,15 +151,15 @@ class CryptoUtil {
     static func decodeMetaData(_ encryptedData: Data, with metaKey: Data) -> ContactMetaData {
         let data = decodeAES(encryptedData, with: getEncryptionKey(metaKey))
         
-        let timeInterval = Double(bytesToInt32(data.prefix(8).bytes))
+        let timeInterval = Double(bytesToInt32(data.prefix(4).bytes))
         let date = Date(timeIntervalSince1970: timeInterval)
         
         var coord: ContactCoord?
         
-        let latInt32 = bytesToInt32(data.subdata(in: 8..<16).bytes)
+        let latInt32 = bytesToInt32(data.subdata(in: 4..<8).bytes)
         if latInt32 != Int32.max {
-            let lngInt32 = bytesToInt32(data.subdata(in: 16..<24).bytes)
-            let accuracy = bytesToInt32(data.suffix(8).bytes)
+            let lngInt32 = bytesToInt32(data.subdata(in: 8..<12).bytes)
+            let accuracy = bytesToInt32(data.suffix(4).bytes)
             
             coord = ContactCoord(lat: coordToDouble(latInt32),
                                  lng: coordToDouble(lngInt32),
