@@ -47,24 +47,24 @@ extension UIViewController {
                                       style: .default,
                                       handler: { _ in handler() }))
         
-        alert.addAction(UIAlertAction(title: R.string.localizable.cancel_button(), style: .cancel))
+        alert.addAction(UIAlertAction(title: R.string.localizable.cancel_button(), style: .default))
         
         present(alert, animated: true, completion: nil)
     }
     
-    func confirm(_ message: String, handler: @escaping () -> Void, cancelHandler: @escaping () -> Void) {
-        let alert = UIAlertController(title: R.string.localizable.please_confirm(),
+    func choose(_ message: String, yesHandler: @escaping () -> Void, noHandler: @escaping () -> Void) {
+        let alert = UIAlertController(title: R.string.localizable.make_choice(),
                                       message: message,
                                       preferredStyle: .alert)
         
         alert.addAction(UIAlertAction(title: R.string.localizable.yes_button(),
                                       style: .default,
-                                      handler: { _ in handler() }))
+                                      handler: { _ in yesHandler() }))
         
         alert.addAction(
-            UIAlertAction(title: R.string.localizable.cancel_button(),
-                          style: .cancel,
-                          handler: { _ in cancelHandler() })
+            UIAlertAction(title: R.string.localizable.no_button(),
+                          style: .default,
+                          handler: { _ in noHandler() })
         )
         
         present(alert, animated: true, completion: nil)

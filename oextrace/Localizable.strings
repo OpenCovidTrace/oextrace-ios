@@ -48,6 +48,12 @@
 /* Alert button */
 "yes_button" = "Yes";
 
+/* Choice title */
+"make_choice" = "Make a choice";
+
+/* Alert button */
+"no_button" = "No";
+
 /* Alert title */
 "input_required" = "Input required";
 

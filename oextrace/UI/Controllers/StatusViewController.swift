@@ -16,8 +16,8 @@ class StatusViewController: IndicatorViewController {
             confirm(R.string.localizable.report_exposure_confirmation()) {
                 self.updateUserStatus(UserSettingsManager.exposed)
                 
-                self.confirm(R.string.localizable.tracks_upload_confirmation(),
-                             handler: {
+                self.choose(R.string.localizable.tracks_upload_confirmation(),
+                             yesHandler: {
                                 UserSettingsManager.uploadTrack = true
                                 self.shareTrackSwitch.setOn(true, animated: true)
                                 
@@ -25,7 +25,7 @@ class StatusViewController: IndicatorViewController {
                                 
                                 self.requestMetaDataDisclosure()
                 },
-                             cancelHandler: {
+                             noHandler: {
                                 self.requestMetaDataDisclosure()
                 })
             }
@@ -86,14 +86,14 @@ class StatusViewController: IndicatorViewController {
     }
     
     private func requestMetaDataDisclosure() {
-        confirm(R.string.localizable.share_meta_data_confirmation(),
-                     handler: {
+        choose(R.string.localizable.share_meta_data_confirmation(),
+                     yesHandler: {
                         UserSettingsManager.discloseMetaData = true
                         self.shareMetaDataSwitch.setOn(true, animated: true)
                         
                         KeysManager.uploadNewKeys(includeToday: true)
         },
-                     cancelHandler: {
+                     noHandler: {
                         KeysManager.uploadNewKeys(includeToday: true)
         })
     }
