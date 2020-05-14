@@ -17,7 +17,11 @@ def pods
   pod 'R.swift'
 end
 
-target 'oextrace' do
+target 'oextrace DEV' do
+    pods
+end
+
+target 'oextrace PROD' do
     pods
 end
 
