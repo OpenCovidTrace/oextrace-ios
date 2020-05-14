@@ -83,7 +83,7 @@ class LocationManager {
         
         let now = Date.timestamp()
         if now - lastTrackingUpdate > TrackingManager.trackingIntervalMs &&
-            location.horizontalAccuracy > 0 && location.horizontalAccuracy < 50 &&
+            location.horizontalAccuracy > 0 && location.horizontalAccuracy < 30 &&
             UserSettingsManager.recordTrack {
             print("Updating tracking location")
             
