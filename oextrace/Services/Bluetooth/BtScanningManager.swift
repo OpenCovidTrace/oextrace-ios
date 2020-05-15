@@ -12,9 +12,7 @@ class BtScanningManager: NSObject {
     
     private var manager: CBCentralManager!
     
-    private var peripheralsRssi: [CBPeripheral: Int] = [:]
-
-    private var foundDevices = [PeripheralDevice]()
+    private var peripherals: [CBPeripheral: PeripheralData] = [:]
 
     func setup() {
         manager = CBCentralManager(delegate: self, queue: nil, options: nil)
@@ -38,7 +36,7 @@ extension BtScanningManager: CBCentralManagerDelegate {
             
             log("Scanning has started")
         } else if state == .poweredOff {
-            foundDevices.removeAll()
+            peripherals.removeAll()
             if let rootViewController = RootViewController.instance {
                 rootViewController.showBluetoothOffWarning()
             }
@@ -49,15 +47,14 @@ extension BtScanningManager: CBCentralManagerDelegate {
                         didDiscover peripheral: CBPeripheral,
                         advertisementData: [String: Any],
                         rssi RSSI: NSNumber) {
-        peripheralsRssi[peripheral] = RSSI.intValue
-        let foundDevice = PeripheralDevice(peripheral: peripheral, rssi: RSSI.intValue)
-        if foundDevices.contains(foundDevice) {
+        if let peripheralData = peripherals[peripheral],
+            Date.timeIntervalSinceReferenceDate - peripheralData.date.timeIntervalSinceReferenceDate < 5 {
             print("Not connecting to \(peripheral.identifier.uuidString), duplicate RSSI \(RSSI.intValue)")
             
             return
         }
-
-        foundDevices.append(foundDevice)
+        
+        peripherals[peripheral] = PeripheralData(rssi: RSSI.intValue, date: Date())
         peripheral.delegate = self
         
         log("Connecting to \(peripheral.identifier.uuidString), RSSI \(RSSI.intValue)")
@@ -120,14 +117,14 @@ extension BtScanningManager: CBPeripheralDelegate {
             let rollingId = data.subdata(in: 0..<CryptoUtil.keyLength).base64EncodedString()
             let meta = data.subdata(in: 0..<(CryptoUtil.keyLength * 2))
 
-            if let rssi = peripheralsRssi[peripheral] {
+            if let peripheralData = peripherals[peripheral] {
                 let day = CryptoUtil.currentDayNumber()
-                let encounter = BtEncounter(rssi: rssi, meta: meta)
+                let encounter = BtEncounter(rssi: peripheralData.rssi, meta: meta)
                 BtContactsManager.addContact(rollingId, day, encounter)
                 
-                log("Recorded a contact with \(peripheral.identifier.uuidString) RSSI \(rssi)")
+                log("Recorded a contact with \(peripheral.identifier.uuidString) RSSI \(peripheralData.rssi)")
             } else {
-                log("Failed to record contact: no RSSI data")
+                log("Failed to record contact: no peripheral data")
             }
         }
 
@@ -156,4 +153,10 @@ extension BtScanningManager: CBPeripheralDelegate {
         
     }
 
+}
+
+
+struct PeripheralData {
+    let rssi: Int
+    let date: Date
 }

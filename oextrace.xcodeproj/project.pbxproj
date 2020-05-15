@@ -22,7 +22,6 @@
 		FA314BF82461ADFF00852AE2 /* BtAdvertisingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314BD12461ADFE00852AE2 /* BtAdvertisingManager.swift */; };
 		FA314BF92461ADFF00852AE2 /* BtScanningManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314BD22461ADFE00852AE2 /* BtScanningManager.swift */; };
 		FA314BFA2461ADFF00852AE2 /* BtServiceDefinition.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314BD32461ADFE00852AE2 /* BtServiceDefinition.swift */; };
-		FA314BFB2461ADFF00852AE2 /* PeripheralDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314BD42461ADFE00852AE2 /* PeripheralDevice.swift */; };
 		FA314BFC2461ADFF00852AE2 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314BD62461ADFE00852AE2 /* DataManager.swift */; };
 		FA314BFD2461ADFF00852AE2 /* OnboardingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314BD72461ADFE00852AE2 /* OnboardingManager.swift */; };
 		FA314BFE2461ADFF00852AE2 /* QrContactsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314BD82461ADFE00852AE2 /* QrContactsManager.swift */; };
@@ -63,7 +62,6 @@
 		FAB0C0CC246B165A001F7D52 /* BtLogsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314C1D2461AF2300852AE2 /* BtLogsViewController.swift */; };
 		FAB0C0CD246B165A001F7D52 /* IndicatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314BF42461ADFF00852AE2 /* IndicatorViewController.swift */; };
 		FAB0C0CE246B165A001F7D52 /* BtLogsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314BE02461ADFE00852AE2 /* BtLogsManager.swift */; };
-		FAB0C0CF246B165A001F7D52 /* PeripheralDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314BD42461ADFE00852AE2 /* PeripheralDevice.swift */; };
 		FAB0C0D0246B165A001F7D52 /* BtScanningManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314BD22461ADFE00852AE2 /* BtScanningManager.swift */; };
 		FAB0C0D1246B165A001F7D52 /* TrackingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314BDC2461ADFE00852AE2 /* TrackingManager.swift */; };
 		FAB0C0D2246B165A001F7D52 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314BD62461ADFE00852AE2 /* DataManager.swift */; };
@@ -129,7 +127,6 @@
 		FA314BD12461ADFE00852AE2 /* BtAdvertisingManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BtAdvertisingManager.swift; sourceTree = "<group>"; };
 		FA314BD22461ADFE00852AE2 /* BtScanningManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BtScanningManager.swift; sourceTree = "<group>"; };
 		FA314BD32461ADFE00852AE2 /* BtServiceDefinition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BtServiceDefinition.swift; sourceTree = "<group>"; };
-		FA314BD42461ADFE00852AE2 /* PeripheralDevice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeripheralDevice.swift; sourceTree = "<group>"; };
 		FA314BD62461ADFE00852AE2 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		FA314BD72461ADFE00852AE2 /* OnboardingManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingManager.swift; sourceTree = "<group>"; };
 		FA314BD82461ADFE00852AE2 /* QrContactsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QrContactsManager.swift; sourceTree = "<group>"; };
@@ -299,7 +296,6 @@
 				FA314BD12461ADFE00852AE2 /* BtAdvertisingManager.swift */,
 				FA314BD22461ADFE00852AE2 /* BtScanningManager.swift */,
 				FA314BD32461ADFE00852AE2 /* BtServiceDefinition.swift */,
-				FA314BD42461ADFE00852AE2 /* PeripheralDevice.swift */,
 			);
 			path = Bluetooth;
 			sourceTree = "<group>";
@@ -563,7 +559,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$SRCROOT/R.generated.swift",
+				$SRCROOT/R.generated.swift,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -621,7 +617,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$SRCROOT/R.generated.swift",
+				$SRCROOT/R.generated.swift,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -681,7 +677,6 @@
 				FA314C1F2461AF2300852AE2 /* BtLogsViewController.swift in Sources */,
 				FA314C182461ADFF00852AE2 /* IndicatorViewController.swift in Sources */,
 				FA314C062461ADFF00852AE2 /* BtLogsManager.swift in Sources */,
-				FA314BFB2461ADFF00852AE2 /* PeripheralDevice.swift in Sources */,
 				FA314BF92461ADFF00852AE2 /* BtScanningManager.swift in Sources */,
 				FA314C022461ADFF00852AE2 /* TrackingManager.swift in Sources */,
 				FA314BFC2461ADFF00852AE2 /* DataManager.swift in Sources */,
@@ -726,7 +721,6 @@
 				FAB0C0CC246B165A001F7D52 /* BtLogsViewController.swift in Sources */,
 				FAB0C0CD246B165A001F7D52 /* IndicatorViewController.swift in Sources */,
 				FAB0C0CE246B165A001F7D52 /* BtLogsManager.swift in Sources */,
-				FAB0C0CF246B165A001F7D52 /* PeripheralDevice.swift in Sources */,
 				FAB0C0D0246B165A001F7D52 /* BtScanningManager.swift in Sources */,
 				FAB0C0D1246B165A001F7D52 /* TrackingManager.swift in Sources */,
 				FAB0C0D2246B165A001F7D52 /* DataManager.swift in Sources */,
