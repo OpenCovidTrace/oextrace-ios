@@ -117,6 +117,10 @@ class KeysManager {
             offset += 1
         }
         
+        if keysData.keys.isEmpty {
+            return
+        }
+        
         AF.request(NetworkUtil.storageEndpoint("keys"),
                    method: .post,
                    parameters: keysData,
