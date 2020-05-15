@@ -58,6 +58,8 @@ extension BtAdvertisingManager: CBPeripheralManagerDelegate {
         let range = request.offset..<data.count
         request.value = data.subdata(in: range)
         manager.respond(to: request, withResult: .success)
+        
+        log("Sent RPI to \(request.characteristic.uuid.uuidString)")
     }
     
     func peripheralManager(_ peripheral: CBPeripheralManager, didReceiveWrite requests: [CBATTRequest]) {

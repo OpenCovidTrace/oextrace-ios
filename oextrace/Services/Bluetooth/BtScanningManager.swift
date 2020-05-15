@@ -49,12 +49,10 @@ extension BtScanningManager: CBCentralManagerDelegate {
                         didDiscover peripheral: CBPeripheral,
                         advertisementData: [String: Any],
                         rssi RSSI: NSNumber) {
-        log("Found peripheral: \(peripheral.identifier.uuidString), RSSI: \(RSSI.stringValue), " +
-            "advertisementData: \(advertisementData.debugDescription)")
         peripheralsRssi[peripheral] = RSSI.intValue
         let foundDevice = PeripheralDevice(peripheral: peripheral, rssi: RSSI.intValue)
         if foundDevices.contains(foundDevice) {
-            log("Not connecting to \(peripheral.identifier.uuidString), duplicate RSSI \(RSSI.intValue)")
+            print("Not connecting to \(peripheral.identifier.uuidString), duplicate RSSI \(RSSI.intValue)")
             
             return
         }

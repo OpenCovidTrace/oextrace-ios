@@ -12,7 +12,6 @@ extension UIViewController {
     }
     
     
-    
     /*
      Indicator
      */
