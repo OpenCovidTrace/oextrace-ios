@@ -6,11 +6,14 @@ class MapViewController: UIViewController {
     
     private static let myLocationDistanceMeters = 3000
     
+    private static let annotationIdentifier = "InfectedContactAnnotation"
+    
     var rootViewController: RootViewController!
     
-    private var mkContactPoints: [MKPointAnnotation: QrContact] = [:]
+    private var mkContactPoints: [MKPointAnnotation] = []
     private var mkUserPolylines: [MKPolyline] = []
     private var mkSickPolylines: [MKPolyline] = []
+    
     private var tracks: [TrackingPoint] = []
     
     @IBOutlet weak var mapView: MKMapView!
@@ -168,23 +171,36 @@ class MapViewController: UIViewController {
     }
     
     func updateContacts() {
-        mkContactPoints.keys.forEach(mapView.removeAnnotation)
+        mkContactPoints.forEach(mapView.removeAnnotation)
         mkContactPoints.removeAll()
+        
+        func addContactPoint(_ metaData: ContactMetaData, _ coord: ContactCoord) {
+            let annotation = MKPointAnnotation()
+            
+            annotation.coordinate = coord.coordinate()
+            let date = AppDelegate.dateFormatter.string(from: metaData.date)
+            annotation.title = R.string.localizable.contact_at_date(date)
+            
+            mkContactPoints.append(annotation)
+        }
+        
+        BtContactsManager.contacts.values.forEach { contact in
+            contact.encounters.forEach { encounter in
+                if let metaData = encounter.metaData,
+                    let coord = metaData.coord {
+                    addContactPoint(metaData, coord)
+                }
+            }
+        }
         
         QrContactsManager.contacts.forEach { contact in
             if let metaData = contact.metaData,
                 let coord = metaData.coord {
-                let annotation = MKPointAnnotation()
-                
-                annotation.coordinate = coord.coordinate()
-                let date = AppDelegate.dateFormatter.string(from: metaData.date)
-                annotation.title = R.string.localizable.contact_at_date(date)
-                
-                mkContactPoints[annotation] = contact
+                addContactPoint(metaData, coord)
             }
         }
         
-        mkContactPoints.keys.forEach(mapView.addAnnotation)
+        mkContactPoints.forEach(mapView.addAnnotation)
     }
     
     func goToContact(_ coord: ContactCoord) {
@@ -218,32 +234,14 @@ extension MapViewController: MKMapViewDelegate {
     
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         guard annotation is MKPointAnnotation else { return nil }
-        var annotationView: MKAnnotationView?
-        var identifier: String?
         
-        if let contact = mkContactPoints[annotation as! MKPointAnnotation] {
-            if contact.exposed {
-                identifier = "InfectedContactAnnotation"
-            } else {
-                identifier = "ContactAnnotation"
-            }
+        var annotationView: MKAnnotationView?
             
-            annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier!)
-        } else {
-            identifier = "CountryAnnotation"
-            annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier!)
-        }
+        annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: MapViewController.annotationIdentifier)
         
         if annotationView == nil {
-            let pinAnnotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: identifier!)
-            if identifier == "InfectedContactAnnotation" {
-                pinAnnotationView.pinTintColor = UIColor.systemRed
-            } else if identifier == "ContactAnnotation" {
-                pinAnnotationView.pinTintColor = UIColor.systemBlue
-            } else {
-                pinAnnotationView.pinTintColor = UIColor.systemYellow
-            }
-            
+            let pinAnnotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: MapViewController.annotationIdentifier)
+            pinAnnotationView.pinTintColor = UIColor.systemRed
             annotationView = pinAnnotationView
             annotationView!.canShowCallout = true
         } else {

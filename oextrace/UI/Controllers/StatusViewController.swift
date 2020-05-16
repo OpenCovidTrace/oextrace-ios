@@ -30,8 +30,6 @@ class StatusViewController: IndicatorViewController {
                 })
             }
         }
-        
-        refreshStatus()
     }
     
     @IBAction func recordTrackSwitched(_ sender: Any) {

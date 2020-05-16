@@ -27,7 +27,7 @@
         <!--My status-->
         <scene sceneID="p0f-wj-N6p">
             <objects>
-                <viewController id="Ghp-dC-3Qn" customClass="StatusViewController" customModule="OExTrace_DEV" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Ghp-dC-3Qn" customClass="StatusViewController" customModule="OExTrace" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rjl-BH-rqX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -74,7 +74,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zd8-EY-FkC" customClass="RoundButton" customModule="OExTrace_DEV" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zd8-EY-FkC" customClass="RoundButton" customModule="OExTrace" customModuleProvider="target">
                                 <rect key="frame" x="32" y="410" width="350" height="44"/>
                                 <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -139,7 +139,7 @@
         <!--Map-->
         <scene sceneID="t7t-cV-w6e">
             <objects>
-                <viewController id="Ead-yP-mZy" customClass="MapViewController" customModule="OExTrace_DEV" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Ead-yP-mZy" customClass="MapViewController" customModule="OExTrace" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="g17-sM-bDC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -147,7 +147,7 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="NT9-yX-dTA">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                             </mapView>
-                            <button opaque="NO" alpha="0.64999997615814209" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tEJ-Di-iY8" customClass="RoundButton" customModule="OExTrace_DEV" customModuleProvider="target">
+                            <button opaque="NO" alpha="0.64999997615814209" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tEJ-Di-iY8" customClass="RoundButton" customModule="OExTrace" customModuleProvider="target">
                                 <rect key="frame" x="16" y="685" width="40" height="40"/>
                                 <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -164,7 +164,7 @@
                                     <action selector="zoomOut:" destination="Ead-yP-mZy" eventType="touchUpInside" id="oWs-Jv-ZCP"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" alpha="0.64999997615814209" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GKY-C2-Tma" customClass="RoundButton" customModule="OExTrace_DEV" customModuleProvider="target">
+                            <button opaque="NO" alpha="0.64999997615814209" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GKY-C2-Tma" customClass="RoundButton" customModule="OExTrace" customModuleProvider="target">
                                 <rect key="frame" x="16" y="637" width="40" height="40"/>
                                 <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -181,7 +181,7 @@
                                     <action selector="zoomIn:" destination="Ead-yP-mZy" eventType="touchUpInside" id="zS4-qx-M6O"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" alpha="0.84999999999999998" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LXc-cP-DdP" customClass="RoundButton" customModule="OExTrace_DEV" customModuleProvider="target">
+                            <button opaque="NO" alpha="0.84999999999999998" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LXc-cP-DdP" customClass="RoundButton" customModule="OExTrace" customModuleProvider="target">
                                 <rect key="frame" x="16" y="741" width="40" height="40"/>
                                 <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -196,7 +196,7 @@
                                     <action selector="goToMyLocation:" destination="Ead-yP-mZy" eventType="touchUpInside" id="dQh-mM-oGT"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" alpha="0.65000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ln-ir-e6P" customClass="RoundButton" customModule="OExTrace_DEV" customModuleProvider="target">
+                            <button opaque="NO" alpha="0.65000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ln-ir-e6P" customClass="RoundButton" customModule="OExTrace" customModuleProvider="target">
                                 <rect key="frame" x="358" y="741" width="40" height="40"/>
                                 <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -212,7 +212,7 @@
                                     <action selector="openBtLog:" destination="Ead-yP-mZy" eventType="touchUpInside" id="Qzk-eZ-QYf"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dkq-4B-wmM" customClass="RoundButton" customModule="OExTrace_DEV" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dkq-4B-wmM" customClass="RoundButton" customModule="OExTrace" customModuleProvider="target">
                                 <rect key="frame" x="72" y="741" width="270" height="40"/>
                                 <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -265,12 +265,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kIR-8t-93U" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1231.8840579710145" y="-277.23214285714283"/>
+            <point key="canvasLocation" x="1230.4347826086957" y="-277.23214285714283"/>
         </scene>
         <!--Root View Controller-->
         <scene sceneID="CvO-gS-00e">
             <objects>
-                <tabBarController id="PhS-8S-v8H" customClass="RootViewController" customModule="OExTrace_DEV" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController id="PhS-8S-v8H" customClass="RootViewController" customModule="OExTrace" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="KR4-1p-36V"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hmg-pn-smJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>

@@ -46,8 +46,6 @@ class CryptoUtil {
             fatalError("Failed to generate random bytes")
         }
         
-        print("Generated key: \(bytes)")
-        
         return Data(bytes)
     }
     
