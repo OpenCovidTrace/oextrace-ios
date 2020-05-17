@@ -30,8 +30,7 @@ class CryptoUtil {
     }
     
     
-    // MARK: - Apple/Google crypto spec:
-    // https://covid19-static.cdn-apple.com/applications/covid19/current/static/contact-tracing/pdf/ExposureNotification-CryptographySpecificationv1.2.pdf
+    // MARK: - Apple/Google crypto spec
     
     private static let daySeconds = 60 * 60 * 24
     private static let enIntervalSeconds = 60 * 10
