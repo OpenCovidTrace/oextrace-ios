@@ -117,7 +117,7 @@ extension BtScanningManager: CBPeripheralDelegate {
             log("Received unexpected data length: \(data.count)")
         } else {
             let rollingId = data.subdata(in: 0..<CryptoUtil.keyLength).base64EncodedString()
-            let meta = data.subdata(in: 0..<(CryptoUtil.keyLength * 2))
+            let meta = data.subdata(in: CryptoUtil.keyLength..<(CryptoUtil.keyLength * 2))
 
             if let peripheralData = peripherals[peripheral] {
                 let day = CryptoUtil.currentDayNumber()
