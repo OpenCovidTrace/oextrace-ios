@@ -49,7 +49,7 @@ extension BtScanningManager: CBCentralManagerDelegate {
                         rssi RSSI: NSNumber) {
         if let peripheralData = peripherals[peripheral],
             Date.timeIntervalSinceReferenceDate - peripheralData.date.timeIntervalSinceReferenceDate < 5 {
-            print("Not connecting to \(peripheral.identifier.uuidString) yet")
+            NSLog("Not connecting to \(peripheral.identifier.uuidString) yet")
             
             return
         }
@@ -57,7 +57,7 @@ extension BtScanningManager: CBCentralManagerDelegate {
         peripherals[peripheral] = PeripheralData(rssi: RSSI.intValue, date: Date())
         peripheral.delegate = self
         
-        log("Connecting to \(peripheral.identifier.uuidString), RSSI \(RSSI.intValue)")
+        NSLog("Connecting to \(peripheral.identifier.uuidString), RSSI \(RSSI.intValue)")
         
         connect(to: peripheral)
     }
@@ -70,7 +70,7 @@ extension BtScanningManager: CBCentralManagerDelegate {
     
     func centralManager(_ central: CBCentralManager, didConnect peripheral: CBPeripheral) {
         peripheral.discoverServices([BtServiceDefinition.bleServiceUuid])
-        log("Connected to: \(peripheral.identifier.uuidString)")
+        NSLog("Connected to: \(peripheral.identifier.uuidString)")
     }
     
     func centralManager(_ central: CBCentralManager, didFailToConnect peripheral: CBPeripheral, error: Error?) {
@@ -78,7 +78,7 @@ extension BtScanningManager: CBCentralManagerDelegate {
     }
     
     func centralManager(_ central: CBCentralManager, didDisconnectPeripheral peripheral: CBPeripheral, error: Error?) {
-        log("Disconnected from: \(peripheral.identifier.uuidString)")
+        NSLog("Disconnected from: \(peripheral.identifier.uuidString)")
     }
     
 }
@@ -101,8 +101,10 @@ extension BtScanningManager: CBPeripheralDelegate {
     func peripheral(_ peripheral: CBPeripheral, didDiscoverCharacteristicsFor service: CBService, error: Error?) {
         if let errorValue = error {
             log("Error discovering services: \(errorValue.localizedDescription)")
+            
             return
         }
+        
         if let char = service.characteristics?.first(where: { $0.uuid == BtServiceDefinition.bleCharacteristicUuid }) {
             peripheral.readValue(for: char)
         }
@@ -122,7 +124,7 @@ extension BtScanningManager: CBPeripheralDelegate {
                 let encounter = BtEncounter(rssi: peripheralData.rssi, meta: meta)
                 BtContactsManager.addContact(rollingId, day, encounter)
                 
-                log("Recorded a contact with \(peripheral.identifier.uuidString) RSSI \(peripheralData.rssi)")
+                log("Received RPI from \(peripheral.identifier.uuidString) RSSI \(peripheralData.rssi)")
             } else {
                 log("Failed to record contact: no peripheral data")
             }
@@ -139,18 +141,12 @@ extension BtScanningManager: CBPeripheralDelegate {
 
             return
         }
-
-        if characteristic.isNotifying {
-            log("Subscribed. Notification has begun for: \(characteristic.uuid.uuidString)")
-        }
     }
 
     func peripheral(_ peripheral: CBPeripheral, didWriteValueFor characteristic: CBCharacteristic, error: Error?) {
-        
     }
 
     func peripheral(_ peripheral: CBPeripheral, didModifyServices invalidatedServices: [CBService]) {
-        
     }
 
 }
