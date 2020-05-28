@@ -70,7 +70,8 @@ extension BtScanningManager: CBCentralManagerDelegate {
     
     func centralManager(_ central: CBCentralManager, didConnect peripheral: CBPeripheral) {
         peripheral.discoverServices([BtServiceDefinition.bleServiceUuid])
-        NSLog("Connected to: \(peripheral.identifier.uuidString)")
+        
+        log("Device connected: \(peripheral.identifier.uuidString)")
     }
     
     func centralManager(_ central: CBCentralManager, didFailToConnect peripheral: CBPeripheral, error: Error?) {
@@ -78,7 +79,7 @@ extension BtScanningManager: CBCentralManagerDelegate {
     }
     
     func centralManager(_ central: CBCentralManager, didDisconnectPeripheral peripheral: CBPeripheral, error: Error?) {
-        NSLog("Disconnected from: \(peripheral.identifier.uuidString)")
+        log("Device disconnected: \(peripheral.identifier.uuidString) error \(error?.localizedDescription ?? "NONE")")
     }
     
 }
