@@ -11,6 +11,10 @@ class BtLogsViewController: UIViewController {
         dismiss(animated: true)
     }
     
+    @IBAction func share(_ sender: Any) {
+        shareDialog(textView.text!)
+    }
+    
     @IBAction func clear(_ sender: Any) {
         confirm(R.string.localizable.clear_log_confiration_question()) {
             BtLogsManager.clear()

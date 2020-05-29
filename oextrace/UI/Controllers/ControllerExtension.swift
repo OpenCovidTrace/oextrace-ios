@@ -69,6 +69,13 @@ extension UIViewController {
         present(alert, animated: true, completion: nil)
     }
     
+    func shareDialog(_ item: Any) {
+        let activityViewController = UIActivityViewController(activityItems: [ item ], applicationActivities: nil)
+        activityViewController.popoverPresentationController?.sourceView = self.view // so that iPads won't crash
+        
+        present(activityViewController, animated: true, completion: nil)
+    }
+    
     func showInfo(_ message: String) {
         let alert = UIAlertController(title: AppDelegate.appName, message: message, preferredStyle: .alert)
         
