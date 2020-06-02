@@ -49,8 +49,6 @@ extension BtScanningManager: CBCentralManagerDelegate {
                         rssi RSSI: NSNumber) {
         if let peripheralData = peripherals[peripheral],
             Date.timeIntervalSinceReferenceDate - peripheralData.date.timeIntervalSinceReferenceDate < 5 {
-            NSLog("Not connecting to \(peripheral.identifier.uuidString) yet")
-            
             return
         }
         
