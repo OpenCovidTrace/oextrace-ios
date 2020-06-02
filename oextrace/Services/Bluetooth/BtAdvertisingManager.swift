@@ -30,9 +30,9 @@ extension BtAdvertisingManager: CBPeripheralManagerDelegate {
 
         if peripheral.state == .poweredOn {
             let characteristic = CBMutableCharacteristic(type: BtServiceDefinition.bleCharacteristicUuid,
-                                                         properties: [.read],
+                                                         properties: [.read, .write],
                                                          value: nil,
-                                                         permissions: [.readable])
+                                                         permissions: [.readable, .writeable])
             
             let service = CBMutableService(type: BtServiceDefinition.bleServiceUuid, primary: true)
             service.characteristics = [characteristic]
@@ -63,6 +63,29 @@ extension BtAdvertisingManager: CBPeripheralManagerDelegate {
     }
     
     func peripheralManager(_ peripheral: CBPeripheralManager, didReceiveWrite requests: [CBATTRequest]) {
+        requests.forEach { request in
+            if let data = request.value {
+                if data.count != CryptoUtil.keyLength * 2 {
+                    log("Received unexpected data length: \(data.count)")
+                    
+                    manager?.respond(to: request, withResult: .invalidHandle)
+                } else {
+                    let rollingId = data.subdata(in: 0..<CryptoUtil.keyLength).base64EncodedString()
+                    let meta = data.subdata(in: CryptoUtil.keyLength..<(CryptoUtil.keyLength * 2))
+
+                    let day = CryptoUtil.currentDayNumber()
+                    // FIXME get rssi from scanning device
+                    let encounter = BtEncounter(rssi: 0, meta: meta)
+                    BtContactsManager.addContact(rollingId, day, encounter)
+                    
+                    log("Received RPI from \(request.central.identifier.uuidString)")
+                    
+                    manager?.respond(to: request, withResult: .success)
+                }
+            } else {
+                manager?.respond(to: request, withResult: .invalidHandle)
+            }
+        }
     }
     
     func peripheralManager(_ peripheral: CBPeripheralManager,

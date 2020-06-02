@@ -107,7 +107,9 @@ extension BtScanningManager: CBPeripheralDelegate {
         }
         
         if let char = service.characteristics?.first(where: { $0.uuid == BtServiceDefinition.bleCharacteristicUuid }) {
-            peripheral.readValue(for: char)
+            let data = CryptoUtil.getCurrentRpi()
+            
+            peripheral.writeValue(data, for: char, type: .withResponse)
         }
     }
     
@@ -145,6 +147,17 @@ extension BtScanningManager: CBPeripheralDelegate {
     }
 
     func peripheral(_ peripheral: CBPeripheral, didWriteValueFor characteristic: CBCharacteristic, error: Error?) {
+        guard error == nil else {
+            if let errorDescription = error?.localizedDescription {
+                log("Error write value for characteristic: \(errorDescription)")
+            }
+            
+            return
+        }
+        
+        log("Sent RPI to \(peripheral.identifier.uuidString)")
+        
+        peripheral.readValue(for: characteristic)
     }
 
     func peripheral(_ peripheral: CBPeripheral, didModifyServices invalidatedServices: [CBService]) {
