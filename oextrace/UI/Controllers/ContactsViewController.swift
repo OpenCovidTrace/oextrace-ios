@@ -52,6 +52,11 @@ class ContactsViewController: UIViewController {
                     return true
                 }
                 
+                if let firstBtContact = first.btContact,
+                    let secondBtContact = second.btContact {
+                    return firstBtContact.encounters.count > secondBtContact.encounters.count
+                }
+                
                 return false
             } else {
                 return first.day() > second.day()
@@ -147,7 +152,6 @@ extension ContactsViewController: UITableViewDelegate {
     }
     
 }
-
 
 
 struct ContactCell {
