@@ -107,6 +107,8 @@ extension ContactsViewController: UITableViewDataSource {
             
             cell.encountersLabel.text = R.string.localizable.encounters(btContact.encounters.count)
             cell.encountersLabel.isHidden = false
+            
+            cell.exposedLabel.isHidden = !btContact.exposed
         } else if let qrContact = contact.qrContact {
             cell.typeLabel.text = R.string.localizable.qr_contact()
             
@@ -123,6 +125,8 @@ extension ContactsViewController: UITableViewDataSource {
             }
             
             cell.encountersLabel.isHidden = true
+            
+            cell.exposedLabel.isHidden = !qrContact.exposed
         }
         
         return cell
