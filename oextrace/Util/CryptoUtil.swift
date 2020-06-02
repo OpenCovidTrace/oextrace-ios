@@ -85,6 +85,10 @@ class CryptoUtil {
         return getDayNumber(for: Date())
     }
     
+    static func getDate(dayNumber: Int) -> Date {
+        return Date(timeIntervalSince1970: TimeInterval(dayNumber * daySeconds))
+    }
+    
     private static func getRollingId(_ rpiKey: Data, _ enIntervalNumber: UInt32) -> Data {
         var paddedData = rpiPrefix
         for _ in 6...11 {

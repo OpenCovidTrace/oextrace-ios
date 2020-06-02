@@ -87,6 +87,12 @@
 /* Contact recorded information */
 "contact_recoreded_info" = "The contact has been recorded!";
 
+"bt_contact" = "Bluetooth Contact";
+
+"qr_contact" = "QR Contact";
+
+"encounters" = "Encounters: %d";
+
 /* Error with status code */
 "status_code_error" = "Status code: %d";
 

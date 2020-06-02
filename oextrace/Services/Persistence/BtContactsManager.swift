@@ -24,6 +24,10 @@ class BtContactsManager {
             do {
                 let data = try PropertyListEncoder().encode(newValue)
                 NSKeyedArchiver.archiveRootObject(data, toFile: path)
+                
+                if let contactsViewController = ContactsViewController.instance {
+                    contactsViewController.refresh()
+                }
             } catch {
                 print("Save Failed")
             }
@@ -104,6 +108,10 @@ class BtContact: Codable {
         self.day = day
         
         encounters = [encounter]
+    }
+    
+    func toCell() -> ContactCell {
+        return ContactCell(btContact: self, qrContact: nil)
     }
     
 }

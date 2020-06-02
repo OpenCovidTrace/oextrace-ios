@@ -24,6 +24,10 @@ class QrContactsManager {
             do {
                 let data = try PropertyListEncoder().encode(newValue)
                 NSKeyedArchiver.archiveRootObject(data, toFile: path)
+                
+                if let contactsViewController = ContactsViewController.instance {
+                    contactsViewController.refresh()
+                }
             } catch {
                 print("Save Failed")
             }
@@ -103,6 +107,11 @@ class QrContact: Codable {
         
         self.init(rpiData.prefix(CryptoUtil.keyLength).base64EncodedString(), rpiData.suffix(CryptoUtil.keyLength))
     }
+    
+    func toCell() -> ContactCell {
+        return ContactCell(btContact: nil, qrContact: self)
+    }
+    
 }
 
 struct ContactMetaData: Codable {

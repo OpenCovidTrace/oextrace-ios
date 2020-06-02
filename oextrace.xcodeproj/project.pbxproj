@@ -49,6 +49,12 @@
 		FA314C2A2461B01F00852AE2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FA314C292461B01F00852AE2 /* Localizable.strings */; };
 		FA314C2C2461B0BB00852AE2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FA314C2B2461B0BB00852AE2 /* GoogleService-Info.plist */; };
 		FA314C2E2461B26A00852AE2 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314C2D2461B26A00852AE2 /* R.generated.swift */; };
+		FA61CA3F2486B95100E62199 /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA61CA3E2486B95100E62199 /* ContactsViewController.swift */; };
+		FA61CA422486BBC700E62199 /* ContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA61CA402486BBC700E62199 /* ContactTableViewCell.swift */; };
+		FA61CA432486BBC700E62199 /* ContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA61CA402486BBC700E62199 /* ContactTableViewCell.swift */; };
+		FA61CA442486BBC700E62199 /* ContactTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA61CA412486BBC700E62199 /* ContactTableViewCell.xib */; };
+		FA61CA452486BBC700E62199 /* ContactTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA61CA412486BBC700E62199 /* ContactTableViewCell.xib */; };
+		FA61CA462486C05400E62199 /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA61CA3E2486B95100E62199 /* ContactsViewController.swift */; };
 		FAB0C0C2246B165A001F7D52 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314BCF2461ADFE00852AE2 /* LocationManager.swift */; };
 		FAB0C0C3246B165A001F7D52 /* LocationIndexManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314BD92461ADFE00852AE2 /* LocationIndexManager.swift */; };
 		FAB0C0C4246B165A001F7D52 /* BtServiceDefinition.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314BD32461ADFE00852AE2 /* BtServiceDefinition.swift */; };
@@ -154,6 +160,9 @@
 		FA314C292461B01F00852AE2 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		FA314C2B2461B0BB00852AE2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FA314C2D2461B26A00852AE2 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
+		FA61CA3E2486B95100E62199 /* ContactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
+		FA61CA402486BBC700E62199 /* ContactTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactTableViewCell.swift; sourceTree = "<group>"; };
+		FA61CA412486BBC700E62199 /* ContactTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactTableViewCell.xib; sourceTree = "<group>"; };
 		FAB0C0F2246B165A001F7D52 /* OExTrace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OExTrace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAB0C0F4246B17FB001F7D52 /* OExTrace PROD.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = "OExTrace PROD.entitlements"; sourceTree = "<group>"; };
 		FAB0C0F7246B1877001F7D52 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -332,6 +341,9 @@
 			isa = PBXGroup;
 			children = (
 				FA314C1D2461AF2300852AE2 /* BtLogsViewController.swift */,
+				FA61CA3E2486B95100E62199 /* ContactsViewController.swift */,
+				FA61CA402486BBC700E62199 /* ContactTableViewCell.swift */,
+				FA61CA412486BBC700E62199 /* ContactTableViewCell.xib */,
 				FA314BE72461ADFF00852AE2 /* ControllerExtension.swift */,
 				FA314BF42461ADFF00852AE2 /* IndicatorViewController.swift */,
 				FA314BEC2461ADFF00852AE2 /* MapViewController.swift */,
@@ -475,6 +487,7 @@
 				FA314C2C2461B0BB00852AE2 /* GoogleService-Info.plist in Resources */,
 				FA314BA724619ECA00852AE2 /* Assets.xcassets in Resources */,
 				FA314BA524619EC700852AE2 /* Main.storyboard in Resources */,
+				FA61CA442486BBC700E62199 /* ContactTableViewCell.xib in Resources */,
 				FA314C2A2461B01F00852AE2 /* Localizable.strings in Resources */,
 				FA314C242461AF3900852AE2 /* OnboardingViewController.xib in Resources */,
 				FA314C282461AF4800852AE2 /* QrLinkViewController.xib in Resources */,
@@ -498,6 +511,7 @@
 				FAB0C0E8246B165A001F7D52 /* Assets.xcassets in Resources */,
 				FAB0C0E9246B165A001F7D52 /* Main.storyboard in Resources */,
 				FAB0C0EA246B165A001F7D52 /* Localizable.strings in Resources */,
+				FA61CA452486BBC700E62199 /* ContactTableViewCell.xib in Resources */,
 				FAB0C0F8246B1877001F7D52 /* GoogleService-Info.plist in Resources */,
 				FAB0C0EB246B165A001F7D52 /* OnboardingViewController.xib in Resources */,
 				FAB0C0EC246B165A001F7D52 /* QrLinkViewController.xib in Resources */,
@@ -674,6 +688,7 @@
 				FA314C232461AF3900852AE2 /* OnboardingViewController.swift in Sources */,
 				FA314B9E24619EC700852AE2 /* AppDelegate.swift in Sources */,
 				FA314BF82461ADFF00852AE2 /* BtAdvertisingManager.swift in Sources */,
+				FA61CA422486BBC700E62199 /* ContactTableViewCell.swift in Sources */,
 				FA314C1F2461AF2300852AE2 /* BtLogsViewController.swift in Sources */,
 				FA314C182461ADFF00852AE2 /* IndicatorViewController.swift in Sources */,
 				FA314C062461ADFF00852AE2 /* BtLogsManager.swift in Sources */,
@@ -693,6 +708,7 @@
 				FA314BFE2461ADFF00852AE2 /* QrContactsManager.swift in Sources */,
 				FA314C072461ADFF00852AE2 /* BtContactsManager.swift in Sources */,
 				FA314C002461ADFF00852AE2 /* KeysManager.swift in Sources */,
+				FA61CA3F2486B95100E62199 /* ContactsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -708,6 +724,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA61CA432486BBC700E62199 /* ContactTableViewCell.swift in Sources */,
 				FAB0C0C2246B165A001F7D52 /* LocationManager.swift in Sources */,
 				FAB0C0C3246B165A001F7D52 /* LocationIndexManager.swift in Sources */,
 				FAB0C0C4246B165A001F7D52 /* BtServiceDefinition.swift in Sources */,
@@ -737,6 +754,7 @@
 				FAB0C0DD246B165A001F7D52 /* QrContactsManager.swift in Sources */,
 				FAB0C0DE246B165A001F7D52 /* BtContactsManager.swift in Sources */,
 				FAB0C0DF246B165A001F7D52 /* KeysManager.swift in Sources */,
+				FA61CA462486C05400E62199 /* ContactsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -899,7 +917,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.0.2;
+				MARKETING_VERSION = 0.0.3;
 				OTHER_SWIFT_FLAGS = "$(inherited) -DDEVELOPMENT";
 				PRODUCT_BUNDLE_IDENTIFIER = org.openexposuretrace.oextrace.dev;
 				PRODUCT_NAME = "OExTrace DEV";
@@ -923,7 +941,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.0.2;
+				MARKETING_VERSION = 0.0.3;
 				OTHER_SWIFT_FLAGS = "$(inherited) -DDEVELOPMENT";
 				PRODUCT_BUNDLE_IDENTIFIER = org.openexposuretrace.oextrace.dev;
 				PRODUCT_NAME = "OExTrace DEV";

@@ -7,7 +7,6 @@ class RootViewController: UITabBarController {
     static var instance: RootViewController?
     
     var mapViewController: MapViewController!
-    var statusViewController: StatusViewController!
     
     var indicator: UIActivityIndicatorView!
     
@@ -19,7 +18,8 @@ class RootViewController: UITabBarController {
         mapViewController = viewControllers?[0] as? MapViewController
         mapViewController.rootViewController = self
         
-        statusViewController = viewControllers?[1] as? StatusViewController
+        let contactsViewController = viewControllers?[1] as! ContactsViewController
+        contactsViewController.rootViewController = self
         
         // preload all tabs
         viewControllers?.forEach { _ = $0.view }
@@ -73,6 +73,10 @@ class RootViewController: UITabBarController {
     
     override func viewWillDisappear(_ animated: Bool) {
         RootViewController.instance = nil
+    }
+    
+    func showMap() {
+        selectedIndex = 0
     }
     
     func showBluetoothOffWarning() {
