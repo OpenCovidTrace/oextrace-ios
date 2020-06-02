@@ -128,6 +128,8 @@ extension BtScanningManager: CBPeripheralDelegate {
                 BtContactsManager.addContact(rollingId, day, encounter)
                 
                 log("Received RPI from \(peripheral.identifier.uuidString) RSSI \(peripheralData.rssi)")
+                
+                AppDelegate.logEvent("received_rpi_scan")
             } else {
                 log("Failed to record contact: no peripheral data")
             }
@@ -156,6 +158,8 @@ extension BtScanningManager: CBPeripheralDelegate {
         }
         
         log("Sent RPI to \(peripheral.identifier.uuidString)")
+        
+        AppDelegate.logEvent("sent_rpi_scan")
         
         peripheral.readValue(for: characteristic)
     }

@@ -60,6 +60,8 @@ extension BtAdvertisingManager: CBPeripheralManagerDelegate {
         manager.respond(to: request, withResult: .success)
         
         log("Sent RPI to \(request.characteristic.uuid.uuidString)")
+        
+        AppDelegate.logEvent("sent_rpi_adv")
     }
     
     func peripheralManager(_ peripheral: CBPeripheralManager, didReceiveWrite requests: [CBATTRequest]) {
@@ -79,6 +81,8 @@ extension BtAdvertisingManager: CBPeripheralManagerDelegate {
                     BtContactsManager.addContact(rollingId, day, encounter)
                     
                     log("Received RPI from \(request.central.identifier.uuidString)")
+                    
+                    AppDelegate.logEvent("received_rpi_adv")
                     
                     manager?.respond(to: request, withResult: .success)
                 }

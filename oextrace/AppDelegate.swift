@@ -133,7 +133,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     private func logBt(_ text: String) {
         BtLogsManager.append(tag: AppDelegate.tag, text: text)
-    }    
+    }
+    
+    static func logEvent(_ message: String, _ parameters: [String: Any]? = nil) {
+        #if DEBUG
+        #else
+        Analytics.logEvent(message, parameters: parameters)
+        #endif
+    }
+    
 }
 
 extension AppDelegate: CLLocationManagerDelegate {
