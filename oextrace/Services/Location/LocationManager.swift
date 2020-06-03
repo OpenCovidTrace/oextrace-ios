@@ -76,8 +76,8 @@ class LocationManager {
         callbacks.removeAll()
         
         if let rootViewController = RootViewController.instance {
-            rootViewController.mapViewController.accuracyLabel.isHidden = false
-            rootViewController.mapViewController.accuracyLabel.text = "Location accuracy: " +
+            rootViewController.accuracyLabel.isHidden = false
+            rootViewController.accuracyLabel.text = "Location accuracy: " +
             "\(Int(location.horizontalAccuracy)) meters"
         }
         
@@ -92,7 +92,7 @@ class LocationManager {
             TrackingManager.addTrackingPoint(point)
             
             if let rootViewController = RootViewController.instance {
-                rootViewController.mapViewController.updateUserTracks()
+                rootViewController.updateUserTracks()
             }
             
             lastTrackingUpdate = now

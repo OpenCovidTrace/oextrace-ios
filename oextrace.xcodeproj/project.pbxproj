@@ -37,8 +37,6 @@
 		FA314C092461ADFF00852AE2 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314BE42461ADFF00852AE2 /* RoundButton.swift */; };
 		FA314C0B2461ADFF00852AE2 /* ControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314BE72461ADFF00852AE2 /* ControllerExtension.swift */; };
 		FA314C0F2461ADFF00852AE2 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314BEB2461ADFF00852AE2 /* RootViewController.swift */; };
-		FA314C102461ADFF00852AE2 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314BEC2461ADFF00852AE2 /* MapViewController.swift */; };
-		FA314C172461ADFF00852AE2 /* StatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314BF32461ADFF00852AE2 /* StatusViewController.swift */; };
 		FA314C182461ADFF00852AE2 /* IndicatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314BF42461ADFF00852AE2 /* IndicatorViewController.swift */; };
 		FA314C1F2461AF2300852AE2 /* BtLogsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314C1D2461AF2300852AE2 /* BtLogsViewController.swift */; };
 		FA314C202461AF2300852AE2 /* BtLogsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA314C1E2461AF2300852AE2 /* BtLogsViewController.xib */; };
@@ -49,12 +47,10 @@
 		FA314C2A2461B01F00852AE2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FA314C292461B01F00852AE2 /* Localizable.strings */; };
 		FA314C2C2461B0BB00852AE2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FA314C2B2461B0BB00852AE2 /* GoogleService-Info.plist */; };
 		FA314C2E2461B26A00852AE2 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314C2D2461B26A00852AE2 /* R.generated.swift */; };
-		FA61CA3F2486B95100E62199 /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA61CA3E2486B95100E62199 /* ContactsViewController.swift */; };
 		FA61CA422486BBC700E62199 /* ContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA61CA402486BBC700E62199 /* ContactTableViewCell.swift */; };
 		FA61CA432486BBC700E62199 /* ContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA61CA402486BBC700E62199 /* ContactTableViewCell.swift */; };
 		FA61CA442486BBC700E62199 /* ContactTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA61CA412486BBC700E62199 /* ContactTableViewCell.xib */; };
 		FA61CA452486BBC700E62199 /* ContactTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA61CA412486BBC700E62199 /* ContactTableViewCell.xib */; };
-		FA61CA462486C05400E62199 /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA61CA3E2486B95100E62199 /* ContactsViewController.swift */; };
 		FAB0C0C2246B165A001F7D52 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314BCF2461ADFE00852AE2 /* LocationManager.swift */; };
 		FAB0C0C3246B165A001F7D52 /* LocationIndexManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314BD92461ADFE00852AE2 /* LocationIndexManager.swift */; };
 		FAB0C0C4246B165A001F7D52 /* BtServiceDefinition.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314BD32461ADFE00852AE2 /* BtServiceDefinition.swift */; };
@@ -77,10 +73,8 @@
 		FAB0C0D6246B165A001F7D52 /* LocationBordersManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314BDD2461ADFE00852AE2 /* LocationBordersManager.swift */; };
 		FAB0C0D7246B165A001F7D52 /* TracksManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314BDE2461ADFE00852AE2 /* TracksManager.swift */; };
 		FAB0C0D8246B165A001F7D52 /* CryptoUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314BCC2461ADFE00852AE2 /* CryptoUtil.swift */; };
-		FAB0C0D9246B165A001F7D52 /* StatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314BF32461ADFF00852AE2 /* StatusViewController.swift */; };
 		FAB0C0DA246B165A001F7D52 /* ControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314BE72461ADFF00852AE2 /* ControllerExtension.swift */; };
 		FAB0C0DB246B165A001F7D52 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314C2D2461B26A00852AE2 /* R.generated.swift */; };
-		FAB0C0DC246B165A001F7D52 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314BEC2461ADFF00852AE2 /* MapViewController.swift */; };
 		FAB0C0DD246B165A001F7D52 /* QrContactsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314BD82461ADFE00852AE2 /* QrContactsManager.swift */; };
 		FAB0C0DE246B165A001F7D52 /* BtContactsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314BE12461ADFE00852AE2 /* BtContactsManager.swift */; };
 		FAB0C0DF246B165A001F7D52 /* KeysManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314BDA2461ADFE00852AE2 /* KeysManager.swift */; };
@@ -94,6 +88,14 @@
 		FAB0C0EB246B165A001F7D52 /* OnboardingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA314C222461AF3900852AE2 /* OnboardingViewController.xib */; };
 		FAB0C0EC246B165A001F7D52 /* QrLinkViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA314C262461AF4800852AE2 /* QrLinkViewController.xib */; };
 		FAB0C0F8246B1877001F7D52 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FAB0C0F7246B1877001F7D52 /* GoogleService-Info.plist */; };
+		FAE30C782487BAF500C137DB /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE30C762487BAF500C137DB /* ContactsViewController.swift */; };
+		FAE30C792487BAF500C137DB /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE30C762487BAF500C137DB /* ContactsViewController.swift */; };
+		FAE30C7A2487BAF500C137DB /* ContactsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAE30C772487BAF500C137DB /* ContactsViewController.xib */; };
+		FAE30C7B2487BAF500C137DB /* ContactsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAE30C772487BAF500C137DB /* ContactsViewController.xib */; };
+		FAE30C812487BB3C00C137DB /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE30C7F2487BB3C00C137DB /* SettingsViewController.swift */; };
+		FAE30C822487BB3C00C137DB /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE30C7F2487BB3C00C137DB /* SettingsViewController.swift */; };
+		FAE30C832487BB3C00C137DB /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAE30C802487BB3C00C137DB /* SettingsViewController.xib */; };
+		FAE30C842487BB3C00C137DB /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAE30C802487BB3C00C137DB /* SettingsViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -148,8 +150,6 @@
 		FA314BE42461ADFF00852AE2 /* RoundButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		FA314BE72461ADFF00852AE2 /* ControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControllerExtension.swift; sourceTree = "<group>"; };
 		FA314BEB2461ADFF00852AE2 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
-		FA314BEC2461ADFF00852AE2 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
-		FA314BF32461ADFF00852AE2 /* StatusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusViewController.swift; sourceTree = "<group>"; };
 		FA314BF42461ADFF00852AE2 /* IndicatorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndicatorViewController.swift; sourceTree = "<group>"; };
 		FA314C1D2461AF2300852AE2 /* BtLogsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BtLogsViewController.swift; sourceTree = "<group>"; };
 		FA314C1E2461AF2300852AE2 /* BtLogsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BtLogsViewController.xib; sourceTree = "<group>"; };
@@ -160,12 +160,15 @@
 		FA314C292461B01F00852AE2 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		FA314C2B2461B0BB00852AE2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FA314C2D2461B26A00852AE2 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
-		FA61CA3E2486B95100E62199 /* ContactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
 		FA61CA402486BBC700E62199 /* ContactTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactTableViewCell.swift; sourceTree = "<group>"; };
 		FA61CA412486BBC700E62199 /* ContactTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactTableViewCell.xib; sourceTree = "<group>"; };
 		FAB0C0F2246B165A001F7D52 /* OExTrace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OExTrace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAB0C0F4246B17FB001F7D52 /* OExTrace PROD.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = "OExTrace PROD.entitlements"; sourceTree = "<group>"; };
 		FAB0C0F7246B1877001F7D52 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FAE30C762487BAF500C137DB /* ContactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
+		FAE30C772487BAF500C137DB /* ContactsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactsViewController.xib; sourceTree = "<group>"; };
+		FAE30C7F2487BB3C00C137DB /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		FAE30C802487BB3C00C137DB /* SettingsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -341,19 +344,20 @@
 			isa = PBXGroup;
 			children = (
 				FA314C1D2461AF2300852AE2 /* BtLogsViewController.swift */,
-				FA61CA3E2486B95100E62199 /* ContactsViewController.swift */,
+				FAE30C762487BAF500C137DB /* ContactsViewController.swift */,
 				FA61CA402486BBC700E62199 /* ContactTableViewCell.swift */,
-				FA61CA412486BBC700E62199 /* ContactTableViewCell.xib */,
 				FA314BE72461ADFF00852AE2 /* ControllerExtension.swift */,
 				FA314BF42461ADFF00852AE2 /* IndicatorViewController.swift */,
-				FA314BEC2461ADFF00852AE2 /* MapViewController.swift */,
 				FA314C212461AF3900852AE2 /* OnboardingViewController.swift */,
 				FA314C252461AF4800852AE2 /* QrLinkViewController.swift */,
 				FA314BEB2461ADFF00852AE2 /* RootViewController.swift */,
-				FA314BF32461ADFF00852AE2 /* StatusViewController.swift */,
+				FAE30C7F2487BB3C00C137DB /* SettingsViewController.swift */,
 				FA314C1E2461AF2300852AE2 /* BtLogsViewController.xib */,
+				FAE30C772487BAF500C137DB /* ContactsViewController.xib */,
+				FA61CA412486BBC700E62199 /* ContactTableViewCell.xib */,
 				FA314C222461AF3900852AE2 /* OnboardingViewController.xib */,
 				FA314C262461AF4800852AE2 /* QrLinkViewController.xib */,
+				FAE30C802487BB3C00C137DB /* SettingsViewController.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -485,8 +489,10 @@
 				FA314C202461AF2300852AE2 /* BtLogsViewController.xib in Resources */,
 				FA0F3801246582B70080B91B /* README.md in Resources */,
 				FA314C2C2461B0BB00852AE2 /* GoogleService-Info.plist in Resources */,
+				FAE30C7A2487BAF500C137DB /* ContactsViewController.xib in Resources */,
 				FA314BA724619ECA00852AE2 /* Assets.xcassets in Resources */,
 				FA314BA524619EC700852AE2 /* Main.storyboard in Resources */,
+				FAE30C832487BB3C00C137DB /* SettingsViewController.xib in Resources */,
 				FA61CA442486BBC700E62199 /* ContactTableViewCell.xib in Resources */,
 				FA314C2A2461B01F00852AE2 /* Localizable.strings in Resources */,
 				FA314C242461AF3900852AE2 /* OnboardingViewController.xib in Resources */,
@@ -509,8 +515,10 @@
 				FAB0C0E5246B165A001F7D52 /* BtLogsViewController.xib in Resources */,
 				FAB0C0E6246B165A001F7D52 /* README.md in Resources */,
 				FAB0C0E8246B165A001F7D52 /* Assets.xcassets in Resources */,
+				FAE30C7B2487BAF500C137DB /* ContactsViewController.xib in Resources */,
 				FAB0C0E9246B165A001F7D52 /* Main.storyboard in Resources */,
 				FAB0C0EA246B165A001F7D52 /* Localizable.strings in Resources */,
+				FAE30C842487BB3C00C137DB /* SettingsViewController.xib in Resources */,
 				FA61CA452486BBC700E62199 /* ContactTableViewCell.xib in Resources */,
 				FAB0C0F8246B1877001F7D52 /* GoogleService-Info.plist in Resources */,
 				FAB0C0EB246B165A001F7D52 /* OnboardingViewController.xib in Resources */,
@@ -680,6 +688,7 @@
 			files = (
 				FA314BF72461ADFF00852AE2 /* LocationManager.swift in Sources */,
 				FA314BFF2461ADFF00852AE2 /* LocationIndexManager.swift in Sources */,
+				FAE30C812487BB3C00C137DB /* SettingsViewController.swift in Sources */,
 				FA314BFA2461ADFF00852AE2 /* BtServiceDefinition.swift in Sources */,
 				FA314BFD2461ADFF00852AE2 /* OnboardingManager.swift in Sources */,
 				FA314C0F2461ADFF00852AE2 /* RootViewController.swift in Sources */,
@@ -699,16 +708,14 @@
 				FA314C272461AF4800852AE2 /* QrLinkViewController.swift in Sources */,
 				FA314C052461ADFF00852AE2 /* UserSettingsManager.swift in Sources */,
 				FA314C032461ADFF00852AE2 /* LocationBordersManager.swift in Sources */,
+				FAE30C782487BAF500C137DB /* ContactsViewController.swift in Sources */,
 				FA314C042461ADFF00852AE2 /* TracksManager.swift in Sources */,
 				FA314BF62461ADFF00852AE2 /* CryptoUtil.swift in Sources */,
-				FA314C172461ADFF00852AE2 /* StatusViewController.swift in Sources */,
 				FA314C0B2461ADFF00852AE2 /* ControllerExtension.swift in Sources */,
 				FA314C2E2461B26A00852AE2 /* R.generated.swift in Sources */,
-				FA314C102461ADFF00852AE2 /* MapViewController.swift in Sources */,
 				FA314BFE2461ADFF00852AE2 /* QrContactsManager.swift in Sources */,
 				FA314C072461ADFF00852AE2 /* BtContactsManager.swift in Sources */,
 				FA314C002461ADFF00852AE2 /* KeysManager.swift in Sources */,
-				FA61CA3F2486B95100E62199 /* ContactsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -726,6 +733,7 @@
 			files = (
 				FA61CA432486BBC700E62199 /* ContactTableViewCell.swift in Sources */,
 				FAB0C0C2246B165A001F7D52 /* LocationManager.swift in Sources */,
+				FAE30C822487BB3C00C137DB /* SettingsViewController.swift in Sources */,
 				FAB0C0C3246B165A001F7D52 /* LocationIndexManager.swift in Sources */,
 				FAB0C0C4246B165A001F7D52 /* BtServiceDefinition.swift in Sources */,
 				FAB0C0C5246B165A001F7D52 /* OnboardingManager.swift in Sources */,
@@ -745,16 +753,14 @@
 				FAB0C0D4246B165A001F7D52 /* QrLinkViewController.swift in Sources */,
 				FAB0C0D5246B165A001F7D52 /* UserSettingsManager.swift in Sources */,
 				FAB0C0D6246B165A001F7D52 /* LocationBordersManager.swift in Sources */,
+				FAE30C792487BAF500C137DB /* ContactsViewController.swift in Sources */,
 				FAB0C0D7246B165A001F7D52 /* TracksManager.swift in Sources */,
 				FAB0C0D8246B165A001F7D52 /* CryptoUtil.swift in Sources */,
-				FAB0C0D9246B165A001F7D52 /* StatusViewController.swift in Sources */,
 				FAB0C0DA246B165A001F7D52 /* ControllerExtension.swift in Sources */,
 				FAB0C0DB246B165A001F7D52 /* R.generated.swift in Sources */,
-				FAB0C0DC246B165A001F7D52 /* MapViewController.swift in Sources */,
 				FAB0C0DD246B165A001F7D52 /* QrContactsManager.swift in Sources */,
 				FAB0C0DE246B165A001F7D52 /* BtContactsManager.swift in Sources */,
 				FAB0C0DF246B165A001F7D52 /* KeysManager.swift in Sources */,
-				FA61CA462486C05400E62199 /* ContactsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -909,7 +915,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "oextrace/OExTrace DEV.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = S5ENNERNQZ;
 				INFOPLIST_FILE = oextrace/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -933,7 +939,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "oextrace/OExTrace DEV.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = S5ENNERNQZ;
 				INFOPLIST_FILE = oextrace/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;

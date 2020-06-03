@@ -1,13 +1,17 @@
 import UIKit
 import Alamofire
 
-class StatusViewController: IndicatorViewController {
+class SettingsViewController: IndicatorViewController {
     
     @IBOutlet weak var recordTrackSwitch: UISwitch!
     @IBOutlet weak var statusLabel: UILabel!
     @IBOutlet weak var statusButton: UIButton!
     @IBOutlet weak var shareTrackSwitch: UISwitch!
     @IBOutlet weak var shareMetaDataSwitch: UISwitch!
+    
+    @IBAction func close(_ sender: Any) {
+        dismiss(animated: true)
+    }
     
     @IBAction func statusChange(_ sender: Any) {
         if UserSettingsManager.sick() {

@@ -19,6 +19,10 @@ class ContactsViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var noContactsLabel: UILabel!
     
+    @IBAction func close(_ sender: Any) {
+        dismiss(animated: true)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -50,6 +54,8 @@ class ContactsViewController: UIViewController {
                     return firstMetaData.date > secondMetaData.date
                 } else if first.metaData() != nil {
                     return true
+                } else if second.metaData() != nil {
+                    return false
                 }
                 
                 if let firstBtContact = first.btContact,
@@ -146,8 +152,9 @@ extension ContactsViewController: UITableViewDelegate {
         
         if let metaData = contact.metaData(),
             let coord = metaData.coord {
-            rootViewController.showMap()
-            rootViewController.mapViewController.goToContact(coord)
+            
+            close(self)
+            rootViewController.goToContact(coord)
         }
     }
     

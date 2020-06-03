@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SettingsViewController" customModule="OExTrace" customModuleProvider="target">
+            <connections>
+                <outlet property="recordTrackSwitch" destination="JE0-RQ-H88" id="frL-QB-hrs"/>
+                <outlet property="shareMetaDataSwitch" destination="8fM-IW-zOS" id="bms-Ts-w6n"/>
+                <outlet property="shareTrackSwitch" destination="NHD-Fr-Box" id="RTV-sV-ebM"/>
+                <outlet property="statusButton" destination="3uf-kz-4wf" id="QX1-VO-lzu"/>
+                <outlet property="statusLabel" destination="xzz-MR-6rr" id="A6W-dg-QDo"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Share my track" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WA2-sU-Fwq">
+                    <rect key="frame" x="89" y="214.5" width="115" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3uf-kz-4wf" customClass="RoundButton" customModule="OExTrace" customModuleProvider="target">
+                    <rect key="frame" x="32" y="410" width="350" height="44"/>
+                    <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="Qzr-OS-k3q"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" title="STATUS CHANGE"/>
+                    <connections>
+                        <action selector="statusChange:" destination="-1" eventType="touchUpInside" id="XUL-AG-8UK"/>
+                    </connections>
+                </button>
+                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JE0-RQ-H88">
+                    <rect key="frame" x="32" y="162.5" width="51" height="31"/>
+                    <connections>
+                        <action selector="recordTrackSwitched:" destination="-1" eventType="valueChanged" id="MfJ-HN-0ri"/>
+                    </connections>
+                </switch>
+                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="8fM-IW-zOS">
+                    <rect key="frame" x="32" y="256.5" width="51" height="31"/>
+                    <connections>
+                        <action selector="shareMetaDataSwitched:" destination="-1" eventType="valueChanged" id="KTu-71-Lya"/>
+                    </connections>
+                </switch>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CURRENT STATUS" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xzz-MR-6rr">
+                    <rect key="frame" x="32" y="351.5" width="350" height="26.5"/>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                    <color key="textColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Share contacts time &amp; location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8DA-eK-d5l">
+                    <rect key="frame" x="89" y="261.5" width="234" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sz4-eu-BwL">
+                    <rect key="frame" x="32" y="120" width="350" height="26.5"/>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                    <color key="textColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Record my track" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="csN-73-9XE">
+                    <rect key="frame" x="89" y="167.5" width="125.5" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="NHD-Fr-Box">
+                    <rect key="frame" x="32" y="209.5" width="51" height="31"/>
+                    <connections>
+                        <action selector="shareTrackSwitched:" destination="-1" eventType="valueChanged" id="csb-Na-00I"/>
+                    </connections>
+                </switch>
+                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pJE-1r-fkh">
+                    <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <items>
+                        <navigationItem id="3R8-2P-J4N">
+                            <barButtonItem key="leftBarButtonItem" title="Close" id="qIk-Yg-0ne">
+                                <connections>
+                                    <action selector="close:" destination="-1" id="ak3-KB-vv4"/>
+                                </connections>
+                            </barButtonItem>
+                        </navigationItem>
+                    </items>
+                </navigationBar>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="8fM-IW-zOS" firstAttribute="top" secondItem="NHD-Fr-Box" secondAttribute="bottom" constant="16" id="90h-cX-Ko2"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Sz4-eu-BwL" secondAttribute="trailing" constant="32" id="9xH-kO-uxf"/>
+                <constraint firstItem="Sz4-eu-BwL" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="32" id="Bd2-Ul-dAi"/>
+                <constraint firstItem="JE0-RQ-H88" firstAttribute="top" secondItem="Sz4-eu-BwL" secondAttribute="bottom" constant="16" id="BpR-R2-VlV"/>
+                <constraint firstItem="pJE-1r-fkh" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="DcY-CR-bCz"/>
+                <constraint firstItem="pJE-1r-fkh" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="De7-5w-ByS"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="3uf-kz-4wf" secondAttribute="trailing" constant="32" id="HTl-Eh-3n4"/>
+                <constraint firstItem="NHD-Fr-Box" firstAttribute="top" secondItem="JE0-RQ-H88" secondAttribute="bottom" constant="16" id="Hi9-4a-5ck"/>
+                <constraint firstItem="8fM-IW-zOS" firstAttribute="leading" secondItem="JE0-RQ-H88" secondAttribute="leading" id="Rwc-3h-FZY"/>
+                <constraint firstItem="3uf-kz-4wf" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="32" id="TfS-qz-ngz"/>
+                <constraint firstItem="JE0-RQ-H88" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="32" id="Tgn-E1-i0i"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="xzz-MR-6rr" secondAttribute="trailing" constant="32" id="UFA-fn-uYP"/>
+                <constraint firstItem="pJE-1r-fkh" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Wen-8d-QIn"/>
+                <constraint firstItem="xzz-MR-6rr" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="32" id="Zrf-8P-xyF"/>
+                <constraint firstItem="WA2-sU-Fwq" firstAttribute="leading" secondItem="NHD-Fr-Box" secondAttribute="trailing" constant="8" id="cXl-77-0I4"/>
+                <constraint firstItem="8DA-eK-d5l" firstAttribute="leading" secondItem="8fM-IW-zOS" secondAttribute="trailing" constant="8" id="eRe-ac-2cn"/>
+                <constraint firstItem="3uf-kz-4wf" firstAttribute="top" secondItem="xzz-MR-6rr" secondAttribute="bottom" constant="32" id="hky-gw-BmJ"/>
+                <constraint firstItem="csN-73-9XE" firstAttribute="leading" secondItem="JE0-RQ-H88" secondAttribute="trailing" constant="8" id="kT9-Pj-beT"/>
+                <constraint firstItem="xzz-MR-6rr" firstAttribute="top" secondItem="8fM-IW-zOS" secondAttribute="bottom" constant="64" id="lmL-6r-IJW"/>
+                <constraint firstItem="WA2-sU-Fwq" firstAttribute="centerY" secondItem="NHD-Fr-Box" secondAttribute="centerY" id="o92-Zf-zWB"/>
+                <constraint firstItem="csN-73-9XE" firstAttribute="centerY" secondItem="JE0-RQ-H88" secondAttribute="centerY" id="oXj-xM-up5"/>
+                <constraint firstItem="8DA-eK-d5l" firstAttribute="centerY" secondItem="8fM-IW-zOS" secondAttribute="centerY" id="pke-7s-xds"/>
+                <constraint firstItem="NHD-Fr-Box" firstAttribute="leading" secondItem="JE0-RQ-H88" secondAttribute="leading" id="qry-OU-8ia"/>
+                <constraint firstItem="Sz4-eu-BwL" firstAttribute="top" secondItem="pJE-1r-fkh" secondAttribute="bottom" constant="32" id="y5O-cu-Qdx"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="139" y="93"/>
+        </view>
+    </objects>
+</document>
