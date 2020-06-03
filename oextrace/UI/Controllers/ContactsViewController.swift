@@ -61,6 +61,8 @@ class ContactsViewController: UIViewController {
                 if let firstBtContact = first.btContact,
                     let secondBtContact = second.btContact {
                     return firstBtContact.encounters.count > secondBtContact.encounters.count
+                } else if first.btContact != nil {
+                    return true
                 }
                 
                 return false
