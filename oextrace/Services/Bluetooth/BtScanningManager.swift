@@ -33,7 +33,8 @@ extension BtScanningManager: CBCentralManagerDelegate {
         state = central.state
         
         if state == .poweredOn {
-            manager.scanForPeripherals(withServices: [BtServiceDefinition.bleServiceUuid])
+            manager.scanForPeripherals(withServices: [BtServiceDefinition.bleServiceUuid],
+                                       options: [CBCentralManagerScanOptionAllowDuplicatesKey: true])
             
             log("Scanning has started")
         } else if state == .poweredOff {
