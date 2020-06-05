@@ -64,7 +64,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         LocationManager.initialize(self)
         
         
-        logBt("App did finish launching")
+        /*
+         * BLE services
+         */
+        
+        if OnboardingManager.isComplete() {
+            BtAdvertisingManager.shared.setup()
+            BtScanningManager.shared.setup()
+            
+            logBt("App did finish launching")
+        }
+        
         
         return true
     }

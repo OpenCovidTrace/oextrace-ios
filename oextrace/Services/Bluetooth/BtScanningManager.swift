@@ -15,7 +15,9 @@ class BtScanningManager: NSObject {
     private var peripherals: [CBPeripheral: PeripheralData] = [:]
 
     func setup() {
-        manager = CBCentralManager(delegate: self, queue: nil, options: nil)
+        manager = CBCentralManager(delegate: self,
+                                   queue: nil,
+                                   options: [CBCentralManagerOptionRestoreIdentifierKey: "oextraceBleScan"])
     }
     
     private func log(_ text: String) {
@@ -31,8 +33,7 @@ extension BtScanningManager: CBCentralManagerDelegate {
         state = central.state
         
         if state == .poweredOn {
-            manager.scanForPeripherals(withServices: [BtServiceDefinition.bleServiceUuid],
-                                       options: [CBCentralManagerScanOptionAllowDuplicatesKey: true])
+            manager.scanForPeripherals(withServices: [BtServiceDefinition.bleServiceUuid])
             
             log("Scanning has started")
         } else if state == .poweredOff {
@@ -78,6 +79,10 @@ extension BtScanningManager: CBCentralManagerDelegate {
     
     func centralManager(_ central: CBCentralManager, didDisconnectPeripheral peripheral: CBPeripheral, error: Error?) {
         log("Device disconnected: \(peripheral.identifier.uuidString) error \(error?.localizedDescription ?? "NONE")")
+    }
+    
+    func centralManager(_ central: CBCentralManager, willRestoreState dict: [String: Any]) {
+        log("Did restore state: \(dict)")
     }
     
 }
@@ -162,7 +167,8 @@ extension BtScanningManager: CBPeripheralDelegate {
         peripheral.readValue(for: characteristic)
     }
 
-    func peripheral(_ peripheral: CBPeripheral, didModifyServices invalidatedServices: [CBService]) {
+    func peripheral(_ peripheral: CBPeripheral, didReadRSSI RSSI: NSNumber, error: Error?) {
+        
     }
 
 }

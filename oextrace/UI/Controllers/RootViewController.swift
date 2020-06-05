@@ -86,9 +86,6 @@ class RootViewController: IndicatorViewController {
         
         if OnboardingManager.isComplete() {
             LocationManager.requestLocationUpdates(self)
-            
-            BtAdvertisingManager.shared.setup()
-            BtScanningManager.shared.setup()
         } else {
             navigationController?.pushViewController(
                 OnboardingViewController.instanciate(),

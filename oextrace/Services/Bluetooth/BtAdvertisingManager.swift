@@ -10,7 +10,9 @@ class BtAdvertisingManager: NSObject {
     private var manager: CBPeripheralManager!
 
     func setup() {
-        manager = CBPeripheralManager(delegate: self, queue: nil, options: nil)
+        manager = CBPeripheralManager(delegate: self,
+                                      queue: nil,
+                                      options: [CBCentralManagerOptionRestoreIdentifierKey: "oextraceBleAdv"])
     }
     
     private func startAdvertising() {
@@ -21,6 +23,7 @@ class BtAdvertisingManager: NSObject {
     private func log(_ text: String) {
         BtLogsManager.append(tag: BtAdvertisingManager.tag, text: text)
     }
+    
 }
 
 extension BtAdvertisingManager: CBPeripheralManagerDelegate {
@@ -103,6 +106,10 @@ extension BtAdvertisingManager: CBPeripheralManagerDelegate {
     }
     
     func peripheralManagerIsReady(toUpdateSubscribers peripheral: CBPeripheralManager) {
+    }
+    
+    func peripheralManager(_ peripheral: CBPeripheralManager, willRestoreState dict: [String: Any]) {
+        log("Did restore state: \(dict)")
     }
     
 }
