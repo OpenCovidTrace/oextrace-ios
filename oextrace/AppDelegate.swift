@@ -20,7 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     static var deviceTokenEncoded: String?
     
     private static let makeContactCategory = "MAKE_CONTACT"
-    private static let tag = "APP"
+    private static let tagApp = "APP"
+    private static let tagSys = "SYS"
     
     var window: UIWindow?
     
@@ -58,6 +59,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
         /*
+         * Power state notifications
+         */
+        
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(self.logPowerState),
+            name: NSNotification.Name.NSProcessInfoPowerStateDidChange,
+            object: nil
+        )
+        
+        logPowerState()
+
+        
+        /*
          * Locaction updates
          */
         
@@ -72,7 +87,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             BtAdvertisingManager.shared.setup()
             BtScanningManager.shared.setup()
             
-            logBt("App did finish launching")
+            logApp("App did finish launching")
         }
         
         
@@ -127,12 +142,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         LocationManager.updateAccuracy(foreground: false)
         
         print("App did enter background")
-        logBt("App did enter background")
+        logApp("App did enter background")
     }
     
     func applicationWillEnterForeground(_ application: UIApplication) {
         print("App will enter foreground")
-        logBt("App will enter foreground")
+        logApp("App will enter foreground")
         
         LocationManager.updateAccuracy(foreground: true)
         
@@ -141,8 +156,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window?.rootViewController?.endAppearanceTransition()
     }
     
-    private func logBt(_ text: String) {
-        BtLogsManager.append(tag: AppDelegate.tag, text: text)
+    @objc private func logPowerState() {
+        if ProcessInfo.processInfo.isLowPowerModeEnabled {
+            logSys("Low power mode is ON")
+        } else {
+            logSys("Low power mode is OFF")
+        }
+    }
+    
+    private func logApp(_ text: String) {
+        BtLogsManager.append(tag: AppDelegate.tagApp, text: text)
+    }
+    
+    private func logSys(_ text: String) {
+        DispatchQueue.main.async {
+            BtLogsManager.append(tag: AppDelegate.tagSys, text: text)
+        }
     }
     
     static func logEvent(_ message: String, _ parameters: [String: Any]? = nil) {
