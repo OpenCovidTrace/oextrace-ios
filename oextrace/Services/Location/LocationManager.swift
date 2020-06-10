@@ -25,7 +25,7 @@ class LocationManager {
         locationManager.delegate = delegate
         
         if let lastPoint = TrackingManager.trackingData.last {
-            lastTrackingUpdate = lastPoint.tst
+            lastTrackingUpdate = lastPoint.point.tst
         }
     }
     
@@ -82,12 +82,10 @@ class LocationManager {
         }
         
         let now = Date.timestamp()
-        if now - lastTrackingUpdate > TrackingManager.trackingIntervalMs &&
-            location.horizontalAccuracy > 0 && location.horizontalAccuracy < 30 &&
-            UserSettingsManager.recordTrack {
+        if location.horizontalAccuracy > 0 && UserSettingsManager.recordTrack {
             print("Updating tracking location")
             
-            let point = TrackingPoint(location.coordinate)
+            let point = RawTrackingPoint(location)
             
             TrackingManager.addTrackingPoint(point)
             

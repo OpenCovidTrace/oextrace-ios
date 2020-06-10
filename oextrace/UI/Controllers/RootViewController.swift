@@ -148,7 +148,11 @@ class RootViewController: IndicatorViewController {
     func updateUserTracks() {
         print("Updating user tracks...")
         
-        let polylines = makePolylines(TrackingManager.trackingData)
+        let points = TrackingManager.trackingData
+            .filter { $0.accuracy < TrackingManager.accuracyThreshold }
+            .map { $0.point }
+        
+        let polylines = makePolylines(points)
         
         print("Got \(polylines.count) user polylines.")
         

@@ -64,22 +64,28 @@ class TracksManager {
         let oldLastUploadTimestamp = lastUploadTimestamp
         let now = Date.timestamp()
         
-        let points = TrackingManager.trackingData.filter { point in
-            point.tst > oldLastUploadTimestamp
+        let points = TrackingManager.trackingData.filter { raw in
+            raw.point.tst > oldLastUploadTimestamp
         }
         
         var tracksByDay: [Int: Track] = [:]
         
-        points.forEach { point in
-            let dayNumber = point.dayNumber()
+        points.forEach { raw in
+            if raw.accuracy > TrackingManager.accuracyThreshold {
+                return
+            }
+            
+            let dayNumber = raw.point.dayNumber()
             
             if let track = tracksByDay[dayNumber] {
-                track.points.append(point)
+                if raw.point.tst - track.points.last!.tst > TrackingManager.trackingIntervalMs {
+                    track.points.append(raw.point)
+                }
             } else {
                 let (dailyKey, _) = CryptoUtil.getDailyKeys(for: dayNumber)
                 let secretKey = CryptoUtil.toSecretKey(dailyKey)
                 
-                tracksByDay[dayNumber] = Track([point], dayNumber, secretKey)
+                tracksByDay[dayNumber] = Track([raw.point], dayNumber, secretKey)
             }
         }
         

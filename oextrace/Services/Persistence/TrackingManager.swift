@@ -4,17 +4,18 @@ import CoreLocation
 class TrackingManager {
     
     static let trackingIntervalMs = 60000
+    static let accuracyThreshold = 30
     
     private static let path = DataManager.docsDir.appendingPathComponent("tracking").path
     
     private init() {
     }
     
-    static var trackingData: [TrackingPoint] {
+    static var trackingData: [RawTrackingPoint] {
         get {
             guard let data = NSKeyedUnarchiver.unarchiveObject(withFile: path) as? Data else { return [] }
             do {
-                return try PropertyListDecoder().decode([TrackingPoint].self, from: data)
+                return try PropertyListDecoder().decode([RawTrackingPoint].self, from: data)
             } catch {
                 print("Retrieve Failed")
                 
@@ -32,7 +33,7 @@ class TrackingManager {
         }
     }
     
-    static func addTrackingPoint(_ point: TrackingPoint) {
+    static func addTrackingPoint(_ point: RawTrackingPoint) {
         var newTrackingData = trackingData
         
         newTrackingData.append(point)
@@ -43,7 +44,7 @@ class TrackingManager {
     static func removeOldPoints() {
         let expirationTimestamp = DataManager.expirationTimestamp()
         
-        let newTrackingData = trackingData.filter { $0.tst > expirationTimestamp }
+        let newTrackingData = trackingData.filter { $0.point.tst > expirationTimestamp }
         
         trackingData = newTrackingData
     }
@@ -72,5 +73,20 @@ struct TrackingPoint: Codable {
     
     func dayNumber() -> Int {
         return CryptoUtil.getDayNumber(from: tst)
+    }
+}
+
+
+struct RawTrackingPoint: Codable {
+    let point: TrackingPoint
+    let accuracy: Int
+    
+    init(point: TrackingPoint, accuracy: Int) {
+        self.point = point
+        self.accuracy = accuracy
+    }
+    
+    init(_ location: CLLocation) {
+        self.init(point: TrackingPoint(location.coordinate), accuracy: Int(location.horizontalAccuracy))
     }
 }
