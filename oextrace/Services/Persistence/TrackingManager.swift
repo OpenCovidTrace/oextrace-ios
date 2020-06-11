@@ -4,7 +4,7 @@ import CoreLocation
 class TrackingManager {
     
     static let trackingIntervalMs = 60000
-    static let accuracyThreshold = 30
+    static let accuracyThreshold = 20
     
     private static let path = DataManager.docsDir.appendingPathComponent("tracking").path
     

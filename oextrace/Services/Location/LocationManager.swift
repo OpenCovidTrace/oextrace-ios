@@ -23,6 +23,7 @@ class LocationManager {
     
     static func initialize(_ delegate: CLLocationManagerDelegate) {
         locationManager.delegate = delegate
+        locationManager.activityType = .fitness
         
         if let lastPoint = TrackingManager.trackingData.last {
             lastTrackingUpdate = lastPoint.point.tst
@@ -82,7 +83,8 @@ class LocationManager {
         }
         
         let now = Date.timestamp()
-        if location.horizontalAccuracy > 0 && UserSettingsManager.recordTrack {
+        if location.horizontalAccuracy > 0 && now - lastTrackingUpdate > TrackingManager.trackingIntervalMs &&
+            UserSettingsManager.recordTrack {
             print("Updating tracking location")
             
             let point = RawTrackingPoint(location)
